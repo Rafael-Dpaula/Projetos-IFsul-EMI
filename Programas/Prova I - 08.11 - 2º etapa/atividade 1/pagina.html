@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+    <style>
+        .enfeite{
+            background-color: black;
+            font-family: cursive;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+        .result{
+            background-color: black;
+            font-family: cursive;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2 class="enfeite">Problema 1</h2>
+    <div style="border: 3px solid black;">
+        <form action="">
+            <p for="umir" style="font-size: 22px; font-weight: bold;">Umidade Relativa</p>
+            <input type="number" id="umir1" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;" placeholder="leitura 1:"><br>
+            <input type="number" id="umir2" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 2:"><br>
+            <input type="number" id="umir3" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 3:"><br>
+            <input type="number" id="umir4" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 4:"><br>
+            <input type="number" id="umir5" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 5:"><br>
+            <input type="number" id="umir6" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 6:"><br>
+            <input type="number" id="umir7" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 7:"><br>
+            <input type="number" id="umir8" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 8:"><br>
+            <input type="number" id="umir9" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 9:"><br>
+            <input type="number" id="umir10" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 10:"><br>
+            <input type="number" id="umir11" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 11:"><br>
+            <input type="number" id="umir12" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 12:"><br>
+            <input type="number" id="umir13" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 13:"><br>
+            <input type="number" id="umir14" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 14:"><br>
+            <input type="number" id="umir15" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 15:"><br>
+            <input type="number" id="umir16" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 16:"><br>
+            <input type="number" id="umir17" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 17:"><br>
+            <input type="number" id="umir18" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 18:"><br>
+            <input type="number" id="umir19" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 19:"><br>
+            <input type="number" id="umir20" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 20:"><br>
+            <input type="number" id="umir21" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 21:"><br>
+            <input type="number" id="umir22" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 22:"><br>
+            <input type="number" id="umir23" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 23:"><br>
+            <input type="number" id="umir24" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 24:"><br><br>
+
+            <p for="temp" style="font-size: 22px; font-weight: bold;">Temperatura</p>
+            <input type="number" id="temp1" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 1:"><br>
+            <input type="number" id="temp2" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 2:"><br>
+            <input type="number" id="temp3" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 3:"><br>
+            <input type="number" id="temp4" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 4:"><br>
+            <input type="number" id="temp5" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 5:"><br>
+            <input type="number" id="temp6" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 6:"><br>
+            <input type="number" id="temp7" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 7:"><br>
+            <input type="number" id="temp8" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 8:"><br>
+            <input type="number" id="temp9" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 9:"><br>
+            <input type="number" id="temp10" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 10:"><br>
+            <input type="number" id="temp11" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 11:"><br>
+            <input type="number" id="temp12" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 12:"><br>
+            <input type="number" id="temp13" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 13:"><br>
+            <input type="number" id="temp14" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 14:"><br>
+            <input type="number" id="temp15" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 15:"><br>
+            <input type="number" id="temp16" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 16:"><br>
+            <input type="number" id="temp17" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 17:"><br>
+            <input type="number" id="temp18" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 18:"><br>
+            <input type="number" id="temp19" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 19:"><br>
+            <input type="number" id="temp20" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 20:"><br>
+            <input type="number" id="temp21" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 21:"><br>
+            <input type="number" id="temp22" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 22:"><br>
+            <input type="number" id="temp23" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 23:"><br>
+            <input type="number" id="temp24" style="width: 50xp; height: 40px; font-size: 18px; font-family: cursive; padding-left: 20px;"placeholder="leitura 24:">
+
+            <button type="button" onclick="process()">Processar</button>
+        </form>
+        <h2 class="enfeite">Resultados:</h2>
+        
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Amostras de Temperatura: <p  style="padding-left: 20px; font-size: 20px;" id="restmp"></p></p>
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Amostras de Umidade Relativa: <p  style="padding-left: 20px; font-size: 20px;" id="resumi"></p></p>
+
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Media das Amostras de Temperatura: <p  style="padding-left: 20px; font-size: 20px;" id="resmtmp"></p></p>
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Media das Amostras de Umidade: <p  style="padding-left: 20px; font-size: 20px;" id="resmumi"></p></p>
+
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">valor Máximo da Amostra de Umidade: <p id="maxu" style="padding-left: 20px; font-size: 20px;"></p></p>
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Valor mínimo da Amostras de Umidade: <p  style="padding-left: 20px; font-size: 20px;" id="minu"></p></p>
+
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Valor Máximo da Amostras de Temperatura: <p  style="padding-left: 20px; font-size: 20px;" id="maxt"></p></p>
+        <p style="padding-left:10px; font-size: 20px; font-family: cursive;">Valor Mínimo da Amostras de Temperatura: <p  style="padding-left: 20px; font-size: 20px;" id="mint"></p></p>
+
+        <br><br><br>
+    </div>
+    <h2 class="enfeite">@Rafael de Paula</h2>
+</body>
+</html>
