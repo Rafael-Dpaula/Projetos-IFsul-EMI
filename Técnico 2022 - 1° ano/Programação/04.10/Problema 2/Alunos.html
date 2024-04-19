@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2</title>
+    <script src="scripts.js"></script>
+    <style>
+        .letra{
+            background-color: darkgoldenrod;
+            text-align: center;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body bgcolor="lightgray">
+    <h1 class="letra">Problema 2</h1>
+    <form action="">
+        <label for="nome">Nome do livro:</label>
+        <input type="text" id="nome" >
+        <button type="button" onclick="Inserir()">Inserir</button>
+        <button type="button" onclick="Lista()">Ver Lista</button> 
+        <button type="button" onclick="Remover()">Remover</button>
+        <button type="button" onclick="Tamanho()">Ver Tamanho</button>
+    </form>
+    <br> Resultado: <br>
+    <p id="resultado"></p>
+</body>
+</html>

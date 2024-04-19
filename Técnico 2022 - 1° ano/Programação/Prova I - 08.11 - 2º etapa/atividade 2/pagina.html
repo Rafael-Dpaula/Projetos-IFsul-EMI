@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2</title>
+    <script src="script.js"></script>
+    <style>
+    .enfeite{
+        background-color: black;
+        font-family: cursive;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+    }
+    .result{
+        background-color: black;
+        font-family: cursive;
+        color: white;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+    <h2 class="enfeite">Problema 2</h2>
+    <form action="">
+        <label for="alt">Altura da Planta: </label>
+        <input type="number" id="alt">
+        <label for="larg">Largura da Planta: </label>
+        <input type="number" id="larg">
+
+        <button type="button" onclick="process()">Processar</button>
+    </form>
+    <h2 class="enfeite">Resultados:</h2>
+    <p style="padding-left:10px; font-size: 22px; font-family: cursive;">Lista de Alturas: <p style="font-family: cursive; padding-left:20px; font-size: 18px;" id="alts"></p></p>
+    <p style="padding-left:10px; font-size: 22px; font-family: cursive;">Lista de Larguras: <p style="padding-left: 20px;font-family: cursive; font-size: 18px;" id="largs"></p></p>
+
+    <p style=" font-family: cursive; padding-left:10px; font-size: 22px;">Média das Alturas: <p style="padding-left:10px;font-size: 18px;font-family: cursive;" id="malts"></p></p>
+    <p style="padding-left:10px; font-family: cursive; font-size: 22px;">Média das Larguras: <p style="padding-left:10px; font-size: 18px;font-family: cursive;" id="mlargs"></p></p>
+
+    <h2 class="enfeite">@Rafael de Paula</h2>
+</body>
+</html>

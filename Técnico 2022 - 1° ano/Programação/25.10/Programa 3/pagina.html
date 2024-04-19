@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 3</title>
+    <script src="script.js"></script>
+    <style>
+        .enfeite{
+            background-color: black;
+            font-family: cursive;
+            color: aqua;
+            text-align: center;
+            font-size: 20px;
+        }
+        .result{
+            background-color: black;
+            font-family: cursive;
+            color: white;
+            font-size: 20px;
+        }
+        .caixa{
+            border: 2px solid black;
+            margin-left: 250px;
+            width: 1000px;
+            height: 400px;
+            background-color: lightgray;
+
+        }
+        .letras{
+            font-size: 18px;
+            font-family: cursive;
+            color: black;
+            text-decoration: underline aqua solid;
+        }
+        .inputs{
+            height: 20px;
+            border: 1px solid aqua;
+            color: aqua;
+            background-color: white;
+            font-weight:bolder   ;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="enfeite">Programa 3</h2>
+        <div class="caixa">
+            <form action="">
+                <label for="idade" class="letras">Dados: </label>
+              <input type="number" id="idade" class="inputs" placeholder="IDADE DO ALUNO">
+              <input type="number" id="altura" class="inputs" placeholder="ALTURA DO ALUNO">
+              <button type="button" onclick="adicionar()">Adicionar</button><br>
+              <button type="button" onclick="Malturas()">Média das alturas: </button>
+              <button type="button" onclick="Midades()">Média das idades: </button>
+              <button type="button" onclick="limpar()">Limpar listas</button>
+              <button type="button" onclick="">Mostrar listas</button>
+            </form>
+            <h1 class="resultado">Resultados</h1>
+            <p id="malt">Média das alturas:</p>
+            <p id="mida">Média das idades: </p>
+            <p id="Lida">Lista das idades: </p>
+            <p id="Lalt">Lista das alturas: </p>
+        </div>
+    <h2 class="enfeite">@Rafael de Paula</h2>
+</body>
+</html>
