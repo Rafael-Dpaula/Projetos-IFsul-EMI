@@ -1,0 +1,146 @@
+CREATE TABLE Cliente (
+    Cli_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    Cli_nome VARCHAR(100) NOT NULL,
+    Cli_cpf NUMERIC(11) NOT NULL,
+    Cli_fone VARCHAR(13) NOT NULL,
+    Cli_email VARCHAR(100) NULL,
+    fk_Cid_codigo INTEGER NOT NULL
+);
+
+CREATE TABLE Produtos (
+    Pro_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    Pro_nome VARCHAR(100) NOT NULL,
+    Pro_marca VARCHAR(50) NOT NULL,
+    Pro_dtfab DATE NOT NULL,
+    Pro_dtval DATE NOT NULL,
+    Pro_preco NUMERIC(5,2) NOT NULL
+);
+
+CREATE TABLE Compra (
+    Com_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    Com_data DATE NOT NULL,
+    Com_valor NUMERIC(5,2) NOT NULL,
+    Com_hora TIME NOT NULL,
+    fk_Cli_codigo INTEGER NOT NULL,
+    fk_Ent_codigo INTEGER NOT NULL,
+    Com_qtd INTEGER NOT NULL
+);
+
+CREATE TABLE estoque (
+    Est_qtd INTEGER NOT NULL,
+    Est_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    fk_Pro_codigo INTEGER NOT NULL,
+    Est_categoria VARCHAR(50) NOT NULL,
+    Est_descricao VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Fornecedor (
+    For_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    For_endereco VARCHAR(100) NOT NULL,
+    For_email VARCHAR(100) NULL,
+    For_cnpj VARCHAR(14) NOT NULL,
+    For_fone VARCHAR(13) NOT NULL,
+    For_nomefantasia VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Entregas (
+    Ent_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    Ent_endereco VARCHAR(100) NOT NULL,
+    Ent_data DATE NOT NULL,
+    Ent_hora TIME NOT NULL
+);
+
+CREATE TABLE Funcionario (
+    Fun_nome VARCHAR(100) NOT NULL,
+    Fun_fone VARCHAR(13) NOT NULL,
+    Fun_email VARCHAR(100) NULL,
+    Fun_cpf NUMERIC(11) NOT NULL,
+    Fun_nascimento DATE NOT NULL,
+    Fun_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    fk_Car_codigo INTEGER NOT NULL,
+    fk_Cid_codigo INTEGER NOT NULL,
+    fk_Sec_codigo INTEGER NOT NULL
+);
+
+CREATE TABLE Cargo (
+    Car_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    Car_nome VARCHAR(100) NOT NULL,
+    Car_descricao VARCHAR(200) NOT NULL,
+    Car_salario NUMERIC(10,2) NOT NULL
+);
+
+CREATE TABLE Secao (
+    Sec_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL,
+    Sec_nome VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Cidade (
+    Cid_uf CHAR(2) NOT NULL,
+    Cid_nome VARCHAR(100) NOT NULL,
+    Cid_codigo SERIAL PRIMARY KEY UNIQUE NOT NULL
+);
+
+CREATE TABLE Est_For (
+    fk_For_codigo INTEGER NOT NULL,
+    fk_Est_codigo INTEGER NOT NULL
+);
+
+CREATE TABLE Com_Pro (
+    fk_Pro_codigo INTEGER NOT NULL,
+    fk_Com_codigo INTEGER NOT NULL
+);
+ 
+ALTER TABLE Cliente ADD CONSTRAINT FK_Cliente_2
+    FOREIGN KEY (fk_Cid_codigo)
+    REFERENCES Cidade (Cid_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Compra ADD CONSTRAINT FK_Compra_2
+    FOREIGN KEY (fk_Cli_codigo)
+    REFERENCES Cliente (Cli_codigo)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Compra ADD CONSTRAINT FK_Compra_3
+    FOREIGN KEY (fk_Ent_codigo)
+    REFERENCES Entregas (Ent_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE estoque ADD CONSTRAINT FK_estoque_2
+    FOREIGN KEY (fk_Pro_codigo)
+    REFERENCES Produtos (Pro_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_2
+    FOREIGN KEY (fk_Car_codigo)
+    REFERENCES Cargo (Car_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_3
+    FOREIGN KEY (fk_Cid_codigo)
+    REFERENCES Cidade (Cid_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Funcionario ADD CONSTRAINT FK_Funcionario_4
+    FOREIGN KEY (fk_Sec_codigo)
+    REFERENCES Secao (Sec_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Est_For ADD CONSTRAINT FK_Est_For_1
+    FOREIGN KEY (fk_For_codigo)
+    REFERENCES Fornecedor (For_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Est_For ADD CONSTRAINT FK_Est_For_2
+    FOREIGN KEY (fk_Est_codigo)
+    REFERENCES Estoque (Est_codigo)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Com_Pro ADD CONSTRAINT FK_Ven_Pro_1
+    FOREIGN KEY (fk_Pro_codigo)
+    REFERENCES Produtos (Pro_codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Com_Pro ADD CONSTRAINT FK_Ven_Pro_2
+    FOREIGN KEY (fk_Com_codigo)
+    REFERENCES Compra (Com_codigo)
+    ON DELETE SET NULL;

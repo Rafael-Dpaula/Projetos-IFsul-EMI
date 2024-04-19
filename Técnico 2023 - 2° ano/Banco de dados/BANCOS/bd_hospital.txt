@@ -1,0 +1,586 @@
+
+CREATE TABLE CIDADE
+(
+   CID_CODIGO SERIAL NOT NULL,
+   CID_NOME VARCHAR(50) NOT NULL,
+   CID_UF CHAR(2) NOT NULL,
+   PRIMARY KEY(CID_CODIGO)
+);
+
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Água Santa');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Agudo');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Ajuricaba');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alecrim');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alegrete');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alegria');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alpestre');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alto Alegre');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alto Feliz');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Alvorada');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Amaral Ferrador');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Ametista do Sul');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'André da Rocha');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Anta Gorda');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Antônio Prado');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arambaré');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Araricá');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Aratiba');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arroio do Meio');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arroio do Sal');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arroio do Tigre');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arroio dos Ratos');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arroio Grande');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Arvorezinha');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Augusto Pestana');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Áurea');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Bagé');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Balneário Pinhal');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barão');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barão de Cotegipe');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barão do Triunfo');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barra do Guarita');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barra do Quaraí');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barra do Ribeiro');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barra do Rio Azul');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barra Funda');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barracão');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Barros Cassal');
+INSERT INTO cidade(cid_uf, cid_nome) VALUES ('RS', 'Benjamin Constant do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Bento Gonçalves');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Boa Vista das Missões');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Boa Vista do Buricá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Boa Vista do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Bom Jesus');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Bom Princípio');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Bom Progresso');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Bom Retiro do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Boqueirão do Leão');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Bossoroca');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Braga');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Brochier');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Butiá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Caçapava do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cacequi');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cachoeira do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cachoeirinha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cacique Doble');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Caibaté');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Caiçara');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Camaquã');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Camargo');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cambará do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Campestre da Serra');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Campina das Missões');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Campinas do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Campo Bom');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Campo Novo');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Campos Borges');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Candelária');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cândido Godói');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Candiota');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Canela');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Canguçu');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Canoas');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Capão da Canoa');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Capão do Leão');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Capela de Santana');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Capitão');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Capivari do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Caraá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Carazinho');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Carlos Barbosa');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Carlos Gomes');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Casca');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Caseiros');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Catuípe');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Caxias do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Centenário');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cerrito');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cerro Branco');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cerro Grande');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cerro Grande do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cerro Largo');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Chapada');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Charqueadas');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Charrua');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Chiapeta');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Chuí');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Chuvisca');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cidreira');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ciríaco');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Colinas');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Colorado');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Condor');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Constantina');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Coqueiros do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Coronel Barros');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Coronel Bicaco');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cotiporã');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Coxilha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Crissiumal');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cristal');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cristal do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cruz Alta');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Cruzeiro do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'David Canabarro');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Derrubadas');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dezesseis de Novembro');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dilermando de Aguiar');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dois Irmãos');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dois Irmãos das Missões');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dois Lajeados');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dom Feliciano');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dom Pedrito');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dom Pedro de Alcântara');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Dona Francisca');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Doutor Maurício Cardoso');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Doutor Ricardo');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Eldorado do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Encantado');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Encruzilhada do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Engenho Velho');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Entre Rios do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Entre-Ijuís');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Erebango');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Erechim');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ernestina');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Erval Grande');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Erval Seco');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Esmeralda');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Esperança do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Espumoso');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Estação');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Estância Velha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Esteio');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Estrela');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Estrela Velha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Eugênio de Castro');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Fagundes Varela');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Farroupilha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Faxinal do Soturno');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Faxinalzinho');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Fazenda Vilanova');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Feliz');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Flores da Cunha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Floriano Peixoto');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Fontoura Xavier');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Formigueiro');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Fortaleza dos Valos');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Frederico Westphalen');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Garibaldi');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Garruchos');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Gaurama');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'General Câmara');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Gentil');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Getúlio Vargas');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Giruá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Glorinha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Gramado');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Gramado dos Loureiros');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Gramado Xavier');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Gravataí');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Guabiju');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Guaíba');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Guaporé');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Guarani das Missões');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Harmonia');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Herval');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Herveiras');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Horizontina');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Hulha Negra');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Humaitá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ibarama');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ibiaçá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ibiraiaras');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ibirapuitã');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ibirubá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Igrejinha');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ijuí');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ilópolis');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Imbé');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Imigrante');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Independência');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Inhacorá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ipê');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ipiranga do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Iraí');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Itaara');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Itacurubi');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Itapuca');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Itaqui');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Itatiba do Sul');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ivorá');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Ivoti');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Jaboticaba');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Jacutinga');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Jaguarão');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Jaguari');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Jaquirana');
+INSERT INTO cidade (cid_uf, cid_nome) VALUES ('RS', 'Jari');
+
+
+CREATE TABLE cargo (
+    car_codigo serial NOT NULL,
+    car_descricao character varying(100) NOT NULL,
+    PRIMARY KEY (car_codigo)
+);
+
+insert into cargo (car_descricao) values ('Enfermeira');
+insert into cargo (car_descricao) values ('Vigilante');
+insert into cargo (car_descricao) values ('Aux. Serviços Gerais');
+insert into cargo (car_descricao) values ('Porteiro');
+insert into cargo (car_descricao) values ('Copeira');
+insert into cargo (car_descricao) values ('Secretária');
+
+
+CREATE TABLE convenio (
+    con_codigo serial NOT NULL,
+    con_nome character varying(50) NOT NULL,
+    PRIMARY KEY (con_codigo)
+);
+
+insert into convenio (con_nome) values ('Unimed');
+insert into convenio (con_nome) values ('Pontoclínica');
+insert into convenio (con_nome) values ('SUS');
+insert into convenio (con_nome) values ('IPE');
+insert into convenio (con_nome) values ('Ulbra');
+insert into convenio (con_nome) values ('Cassi');
+insert into convenio (con_nome) values ('Capassemo');
+
+CREATE TABLE especialidade (
+    esp_codigo serial NOT NULL,
+    esp_nome character varying NOT NULL,
+    PRIMARY KEY (esp_codigo)
+);
+
+insert into especialidade (esp_nome) values ('Cardiologista');
+insert into especialidade (esp_nome) values ('Radiologista');
+insert into especialidade (esp_nome) values ('Ginecologista');
+insert into especialidade (esp_nome) values ('Geriatra');
+insert into especialidade (esp_nome) values ('Pediatra');
+insert into especialidade (esp_nome) values ('Clinico Geral');
+insert into especialidade (esp_nome) values ('Neurologista');
+insert into especialidade (esp_nome) values ('Proctologista');
+
+CREATE TABLE exame (
+    exa_codigo serial NOT NULL,
+    exa_tipo character varying(20) NOT NULL,
+    PRIMARY KEY (exa_codigo)
+);
+
+insert into exame(exa_tipo) values('Hemograma');
+insert into exame(exa_tipo) values('Endoscopia');
+insert into exame(exa_tipo) values('Trigliceridios');
+insert into exame(exa_tipo) values('Eletrocardiograma');
+insert into exame(exa_tipo) values('Urina');
+insert into exame(exa_tipo) values('Colesterol');
+insert into exame(exa_tipo) values('Colonoscopia');
+insert into exame(exa_tipo) values('Videolaringoscopia');
+insert into exame(exa_tipo) values('Hemograma');
+insert into exame(exa_tipo) values('Fezes');
+
+CREATE TABLE funcionarios (
+    fun_codigo serial NOT NULL,
+    fun_nome character varying(100) NOT NULL,
+    fun_ctps varchar(50) NOT NULL,
+    car_codigo integer NOT NULL,
+    cid_codigo integer NOT NULL,
+    PRIMARY KEY (fun_codigo),
+    FOREIGN KEY(car_codigo) REFERENCES cargo(car_codigo),
+    FOREIGN KEY(cid_codigo) REFERENCES cidade(cid_codigo)
+);
+
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Pedro da Silva', '4587', 2, 5);
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Maria Fernandes Martins', '8721', 1, 16);
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Ricardo Damiani', '1893', 1, 8);
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Carla Pereira', '6729', 3, 21);
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Roger Meira', '3366', 3, 19);
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Jocélia Noronha', '0951', 6, 2);
+insert into funcionarios(fun_nome, fun_ctps, car_codigo, cid_codigo)
+values('Glaciane Dutra', '7631', 1, 9);
+
+CREATE TABLE medico (
+    med_codigo serial NOT NULL,
+    med_nome character varying(50) NOT NULL,
+    med_crm integer NOT NULL,
+    cid_codigo integer NOT NULL,
+    PRIMARY KEY (med_codigo),
+    FOREIGN KEY(cid_codigo) REFERENCES cidade(cid_codigo)
+);
+
+insert into medico(med_nome, med_crm, cid_codigo) values('Silvia Lampert', 4568, 4);
+insert into medico(med_nome, med_crm, cid_codigo) values('Renato Ribeiro', 7612, 8);
+insert into medico(med_nome, med_crm, cid_codigo) values('Marcos Santos', 7619, 9);
+insert into medico(med_nome, med_crm, cid_codigo) values('Emílio Munerolli', 9631, 18);
+insert into medico(med_nome, med_crm, cid_codigo) values('Marcia Dutra', 8788, 4);
+insert into medico(med_nome, med_crm, cid_codigo) values('Mônica Silva', 6541, 16);
+insert into medico(med_nome, med_crm, cid_codigo) values('Rudah Jorge', 6582, 2);
+insert into medico(med_nome, med_crm, cid_codigo) values('Francisco Wolf', 8823, 5);
+
+CREATE TABLE esp_med (
+   med_codigo integer not null,
+   esp_codigo integer not null,
+   PRIMARY KEY(med_codigo, esp_codigo),
+   FOREIGN KEY (med_codigo) REFERENCES medico (med_codigo),
+   FOREIGN KEY (esp_codigo) REFERENCES especialidade (esp_codigo)
+);
+
+insert into esp_med(esp_codigo, med_codigo) values(1, 1);
+insert into esp_med(esp_codigo, med_codigo) values(1, 3);
+insert into esp_med(esp_codigo, med_codigo) values(2, 1);
+insert into esp_med(esp_codigo, med_codigo) values(3, 4);
+insert into esp_med(esp_codigo, med_codigo) values(5, 2);
+insert into esp_med(esp_codigo, med_codigo) values(6, 5);
+insert into esp_med(esp_codigo, med_codigo) values(8, 7);
+insert into esp_med(esp_codigo, med_codigo) values(7, 8);
+insert into esp_med(esp_codigo, med_codigo) values(4, 6);
+insert into esp_med(esp_codigo, med_codigo) values(3, 2);
+insert into esp_med(esp_codigo, med_codigo) values(1, 6);
+
+CREATE TABLE paciente (
+    pac_codigo serial NOT NULL,
+    pac_nome character varying(100) NOT NULL,
+    pac_cpf character varying(11) NOT NULL,
+    pac_fone character varying(20),
+    pac_endereco character varying(100) NOT NULL,
+    pac_sexo character(1) NOT NULL,
+    con_codigo integer NOT NULL,
+    fun_codigo integer NOT NULL,
+    cid_codigo integer NOT NULL,
+    PRIMARY KEY (pac_codigo),
+    FOREIGN KEY(con_codigo) REFERENCES convenio(con_codigo),
+    FOREIGN KEY(fun_codigo) REFERENCES funcionarios (fun_codigo),
+    FOREIGN KEY(cid_codigo) REFERENCES cidade(cid_codigo)
+);
+
+insert into paciente(pac_nome, pac_cpf, pac_fone, pac_endereco, 
+pac_sexo, con_codigo, fun_codigo, cid_codigo) 
+values('João Pereira', '89754312309', '5433167843', 'Av. Brasil, 76',
+'M', 2, 6, 9);
+
+insert into paciente(pac_nome, pac_cpf, pac_fone, pac_endereco, 
+pac_sexo, con_codigo, fun_codigo, cid_codigo) 
+values('Marta Lima', '78609812345', null, 'Rua Bernardo Paz, 687',
+'F', 4, 4, 4);
+
+insert into paciente(pac_nome, pac_cpf, pac_fone, pac_endereco, 
+pac_sexo, con_codigo, fun_codigo, cid_codigo) 
+values('Elvis Nascimento', '88609812377', '5433314578', 'Rua V',
+'M', 1, 7, 7);
+
+insert into paciente(pac_nome, pac_cpf, pac_fone, pac_endereco, 
+pac_sexo, con_codigo, fun_codigo, cid_codigo) 
+values('Moacir Borba', '90862155570', null, 'Rua Oriental, 870',
+'M', 1, 2, 12);
+
+insert into paciente(pac_nome, pac_cpf, pac_fone, pac_endereco, 
+pac_sexo, con_codigo, fun_codigo, cid_codigo) 
+values('Berenice Rocha', '87234509812', '5433298756', 'Rua Y, 82',
+'F', 5, 3, 5);
+
+insert into paciente(pac_nome, pac_cpf, pac_fone, pac_endereco, 
+pac_sexo, con_codigo, fun_codigo, cid_codigo) 
+values('Pedro Bandeira', '07234509878', '5499754312', 'Rua Y, 27',
+'M', 6, 5, 8);
+
+CREATE TABLE atendimento (
+    ate_codigo serial NOT NULL,
+    ate_encaminhamento character varying(100) NOT NULL,
+    ate_diagnostico character varying(100) NOT NULL,
+    ate_motivo character varying(100) NOT NULL,
+    ate_hr time without time zone,
+    ate_data date NOT NULL,
+    med_codigo integer NOT NULL,
+    pac_codigo integer NOT NULL,
+    PRIMARY KEY (ate_codigo),
+    FOREIGN KEY(med_codigo) REFERENCES medico (med_codigo),
+    FOREIGN KEY(pac_codigo) REFERENCES paciente(pac_codigo)
+);
+
+insert into atendimento(ate_encaminhamento, ate_diagnostico, 
+ate_motivo, ate_hr, ate_data, med_codigo, pac_codigo)
+values('Realizar exame complementar', 'Dores nas vértebras posteriores',
+ 'Dores nas costas', '14:45:00', '2010-04-05', 5, 3 );
+
+insert into atendimento(ate_encaminhamento, ate_diagnostico, 
+ate_motivo, ate_hr, ate_data, med_codigo, pac_codigo)
+values('Realizar exames complementares','Infecção com salmonela',
+ 'Vômito e diarréia', '08:00:00', '2010-01-05', 2, 1 );
+
+insert into atendimento(ate_encaminhamento, ate_diagnostico, 
+ate_motivo, ate_hr, ate_data, med_codigo, pac_codigo)
+values('Solicitação de RX', 'Fratura',
+ 'Fratura no braço direito', '21:00:00', '2010-01-06', 4, 5 );
+
+insert into atendimento(ate_encaminhamento, ate_diagnostico, 
+ate_motivo, ate_hr, ate_data, med_codigo, pac_codigo)
+values('Realizar medicação injetável', 'Indisposição alimentar',
+ 'Dores abdominais', '13:45:00', '2010-03-12', 2, 6 );
+
+
+CREATE TABLE aten_exame (
+   ate_codigo integer NOT NULL,
+   exa_codigo integer NOT NULL,
+   PRIMARY KEY (ate_codigo, exa_codigo),
+   FOREIGN KEY (ate_codigo) REFERENCES atendimento(ate_codigo),
+   FOREIGN KEY (exa_codigo) REFERENCES exame(exa_codigo)
+);
+
+CREATE TABLE plantao (
+    pla_codigo serial NOT NULL,
+    pla_dt_ini date NOT NULL,
+    pla_dt_fim date NOT NULL,
+    pla_hr_ini time NOT NULL,
+    pla_hr_fim time NOT NULL,
+    med_codigo integer NOT NULL,
+    PRIMARY KEY (pla_codigo),
+    FOREIGN KEY(med_codigo) REFERENCES medico (med_codigo)
+);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-01-03','2018-01-03','07:00:00','13:00:00',3);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-01-03','2018-01-03','13:00:00','19:00:00',1);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-01-05','2018-01-05','12:00:00','18:00:00',3);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-01-07','2018-01-07','07:00:00','13:00:00',2);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-01-07','2018-01-07','14:00:00','20:00:00',5);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-02-06','2018-02-07','20:00:00','06:30:00',7);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-02-10','2018-02-10','08:00:00','14:00:00',8);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-04-05','2018-04-05','10:00:00','16:30:00',6);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-04-07','2018-04-07','07:00:00','13:00:00',1);
+
+insert into plantao(pla_dt_ini, pla_dt_fim, pla_hr_ini, pla_hr_fim, med_codigo) values ('2018-04-09','2018-04-09','16:30:00','23:00:00',2);
+
+CREATE TABLE posto (
+    pos_codigo serial NOT NULL,
+    pos_numero integer NOT NULL,
+    PRIMARY KEY (pos_codigo)
+);
+
+insert into posto(pos_numero) values(1);
+insert into posto(pos_numero) values(2);
+insert into posto(pos_numero) values(3);
+insert into posto(pos_numero) values(4);
+insert into posto(pos_numero) values(5);
+insert into posto(pos_numero) values(6);
+
+CREATE TABLE equipe (
+    equ_chefe char(1) NOT NULL,
+    pos_codigo integer NOT NULL,
+    fun_codigo integer NOT NULL,
+    PRIMARY KEY (pos_codigo, fun_codigo),
+    FOREIGN KEY(pos_codigo) REFERENCES posto(pos_codigo),
+    FOREIGN KEY(fun_codigo) REFERENCES funcionarios(fun_codigo)
+);
+
+insert into equipe(equ_chefe, pos_codigo, fun_codigo)
+values('S',1,4);
+
+insert into equipe(equ_chefe, pos_codigo, fun_codigo)
+values('N',1,6);
+
+insert into equipe(equ_chefe, pos_codigo, fun_codigo)
+values('N',1,3);
+
+insert into equipe(equ_chefe, pos_codigo, fun_codigo)
+values('S',2,5);
+
+insert into equipe(equ_chefe, pos_codigo, fun_codigo)
+values('N',2,4);
+
+insert into equipe(equ_chefe, pos_codigo, fun_codigo)
+values('N',2,2);
+
+CREATE TABLE quarto (
+    qua_codigo serial NOT NULL,
+    qua_tipo character varying(100) NOT NULL,
+    qua_numero integer NOT NULL,
+    pos_codigo integer NOT NULL,
+    PRIMARY KEY (qua_codigo),
+    FOREIGN KEY(pos_codigo) REFERENCES posto(pos_codigo)
+);
+
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',22,2);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',23,2);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('privativo',21,4);
+
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',31,3);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',32,3);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('privativo',33,3);
+
+
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',41,4);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',42,4);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('privativo',43,4);
+
+
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',51,5);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('semiprivativo',52,5);
+insert into quarto(qua_tipo, qua_numero, pos_codigo) values('privativo',53,5);
+
+
+CREATE TABLE leito (
+    lei_codigo serial NOT NULL,
+    lei_situacao character varying(100) NOT NULL,
+    qua_codigo integer NOT NULL,
+    PRIMARY KEY (lei_codigo),
+    FOREIGN KEY(qua_codigo) REFERENCES quarto(qua_codigo)
+);
+
+insert into leito(lei_situacao, qua_codigo) values('D',1);
+insert into leito(lei_situacao, qua_codigo) values('D',2);
+insert into leito(lei_situacao, qua_codigo) values('D',1);
+insert into leito(lei_situacao, qua_codigo) values('O',2);
+insert into leito(lei_situacao, qua_codigo) values('O',3);
+insert into leito(lei_situacao, qua_codigo) values('O',4);
+insert into leito(lei_situacao, qua_codigo) values('D',5);
+insert into leito(lei_situacao, qua_codigo) values('D',5);
+insert into leito(lei_situacao, qua_codigo) values('D',5);
+insert into leito(lei_situacao, qua_codigo) values('D',6);
+insert into leito(lei_situacao, qua_codigo) values('D',7);
+insert into leito(lei_situacao, qua_codigo) values('D',8);
+
+CREATE TABLE prontuario (
+    pro_codigo serial NOT NULL,
+    pro_descricao character varying(100) NOT NULL,
+    pro_hr time without time zone,
+    pro_data date, 
+    pac_codigo integer NOT NULL,
+    fun_codigo integer NOT NULL,
+    med_codigo integer NOT NULL,
+    exa_codigo integer NULL,
+    lei_codigo integer NOT NULL,
+    PRIMARY KEY (pro_codigo),
+    FOREIGN KEY (pac_codigo) REFERENCES paciente(pac_codigo),
+    FOREIGN KEY (fun_codigo) REFERENCES funcionarios(fun_codigo),
+    FOREIGN KEY (med_codigo) REFERENCES medico(med_codigo),
+    FOREIGN KEY(exa_codigo) REFERENCES exame(exa_codigo),
+    FOREIGN KEY(lei_codigo) REFERENCES leito(lei_codigo)
+);
+
+insert into prontuario(pro_descricao, pro_hr,pro_data, pac_codigo, fun_codigo, med_codigo,exa_codigo, lei_codigo)
+values('Soro fisiológico 3%', '14:00:00', '2018-01-04', 3,
+4, 5, null, 5);
+
+insert into prontuario(pro_descricao, pro_hr,pro_data, pac_codigo, fun_codigo, med_codigo,exa_codigo, lei_codigo)
+values('Dipirona Gotas', '12:00:00', '2018-01-05', 3,
+3, 5, null, 5);
+
+insert into prontuario(pro_descricao, pro_hr,pro_data, pac_codigo, fun_codigo, med_codigo,exa_codigo, lei_codigo)
+values('Soro fisiológico 3%', '08:00:00', '2018-02-04', 4,
+5, 7, null, 3);
+
+
+
