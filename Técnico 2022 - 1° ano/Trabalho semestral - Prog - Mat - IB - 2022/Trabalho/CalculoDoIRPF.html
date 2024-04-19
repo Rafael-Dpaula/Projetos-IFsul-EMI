@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IRPF</title>
+    <script src="Scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+        .rodape{
+            text-align: center;
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            background-color: lightgray;
+            padding-bottom: 11px;
+        }
+        h1{
+            text-align: center;
+        }
+        .letras{
+            color: white ;
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            font-size: 20px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        .inputs{
+            width: 300px;
+            height: 50px;
+            padding-left: 5px;
+            border: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        #id{
+            float: left;
+        }
+        .botaocalc{
+            float: right;
+            width: 260px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid black;
+            margin-bottom: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            margin-top: 4px;
+        }
+        .botaocalc:hover{
+            background-color: aquamarine;
+            text-decoration: underline solid black;
+            cursor: pointer;
+        }
+        .menu{
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            margin-top: 1em;
+            margin-bottom: none;
+        }
+        .menu a{
+            text-align: center;
+            padding: 10px;
+            font-size: 30px;
+            padding-left: 230px;
+        }
+        .menu a:hover{
+            background-color: aquamarine;
+            text-decoration: underline solid black;
+        }
+        .limparfloat::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .links{
+            text-decoration: none;
+            float: left;
+            color: black;
+        }
+        .links:hover{
+            text-decoration:underline ;
+        }
+        .links:visited{
+            color: black;
+        }
+        .margemEsquerda{
+            margin-left: 30px;
+        }
+        .divGeral{
+            width: 1500px;
+            height: 757px;
+            border: 3px solid black
+        }
+        .res{
+            padding-left: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalho Semestral Integrado</h1>
+    <div style="border: 3px solid black;">
+        <img src="Imagens/logo.jpg" id="logo" width="200px" height="150px"> <h1 style="text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 300px;
+        float:right;
+        padding-right: 586px;
+        padding-top: 60px;"> DMR </h1>
+        <P class="letras">Cálculo do IRPF - Imposto de Renda de Pessoa Física </P>
+        <div>
+            <br>
+            <form action="">
+                <label for="nome" style="padding-left: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;">Nome: </label>
+                <input type="text" id="nome" placeholder="Nome do Contribuinte" class="inputs">
+                <label for="renda" style="padding-left: 10px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;">Renda: </label>
+                <input type="number" id="renda" placeholder="Renda do Contribuinte Tributável" class="inputs">
+                <button type="button" class="botaocalc" onclick="calcular()"  style="margin-right:250px;">Cálcular </button>
+            </form><br>
+            <h2 class="letras">Resultados do IRPF: </h2>
+            <br>
+            <p style="font-family:cursive ; font-size: 25px; padding-bottom: 8px; padding-left: 7px;"> A Função Matemática encontrada é: <p class="res" id="resultf1"></p><p class="res" id="resultf2"></p><p class="res" id="resultf3"></p><p class="res" id="resultf4"></p><p class="res" id="resultf5"></p></p>
+            <p style="font-family: cursive; font-size: 25px; padding-bottom: 8px; padding-left: 7px;">Contribuinte: <p class="res" id="NomeContri"></p></p>
+            <p style="font-family: cursive; font-size: 25px; padding-bottom: 8px; padding-left: 7px;">IRPF: <p class="res" id="irpfcontri"></p></p>
+            <p style="font-family: cursive; font-size: 25px; padding-bottom: 8px; padding-left: 7px;">Porcentagem de imposto sobre rendimentos tributáveis:  <p class="res" id="irpfporcent"></p></p>
+            <p style="font-family: cursive; font-size: 25px; padding-bottom: 8px; padding-left: 7px;">Gráfico de tributos sobre pessoa física:  <p id="IRPFgrafico"> <canvas id="meuGrafico" style="width:100%;max-width:700px"></canvas></p></p>
+        </div><br><br>
+    
+        <div class="menu limparfloat">
+            <a class="links margemEsquerda" href="https://www27.receita.fazenda.gov.br/simulador-irpf/" style="float: right; padding-left: 10px; margin-right: 100px;">Site da Simulação do IRPF</a>
+            <a class="links margemEsquerda" href="desenvolvedores.html" style="float: left;padding-left: 10px; margin-left: 100px;">Desenvolvedores do Trabalho</a>
+            <a class="links margemEsquerda" href="Apresentação.html" style="float: left; padding-left:10px; margin-left: 155px;">Apresentação</a>
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+        <div>
+            <P class="rodape">IFSUL - Câmpus Passo Fundo. <br> Estrada perimetral Leste, 150, Passo Fundo - RS. CEP: 99064-440 <br> Telefone:(54)3311-2916 <br> Turma - 1 Ano Informática <br> Grupo - DMR <br> Trabalho - Cálculos Sobre o Imposto de Renda </P>
+
+        </div>
+</body>
+</html>
