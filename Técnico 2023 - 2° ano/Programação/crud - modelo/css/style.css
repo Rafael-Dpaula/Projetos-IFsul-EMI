@@ -1,0 +1,148 @@
+body {
+    color: #444;
+    font-family: Tahoma;
+    display: flex;
+    height: 96vh;
+  }
+  
+  #app {
+    width: 512px;
+    margin: auto;
+    box-shadow: 4px 4px 20px #888;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+ #Log {
+    width: 512px;
+    margin: auto;
+    padding: 20px;
+ }
+ 
+  .center {
+    text-align: center;
+  }
+ 
+  .left{
+     text-align: left;
+  }
+  
+  .IniOculta {
+    display: none;
+  }
+  
+  h3 {
+    margin: 4px;
+    font-weight: normal;
+  }
+  
+  input {
+    width: 80%;
+    margin: 4px;
+    padding: 4px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  button {
+    background-color: #4c4;
+    font-size: 15px;
+    color: white;
+    padding: 4px;
+    margin: 4px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+  
+  button:hover {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .CorBotaoCadastrar {
+    background-color: #44c;
+  }
+ 
+  .CorBotaoDeletar {
+    background-color: #c44;
+  }
+ 
+  .logado {
+    display: none;
+  }
+ 
+  #Carregando {
+     position: absolute;
+     top: calc(50% - 100px);
+     left: calc(50% - 200px);
+     z-index: 1;
+  }
+ 
+  #AcessarGoogle{
+    cursor: pointer;
+    margin: 4px;
+  }
+ 
+  #auth img{
+     cursor: pointer;
+     margin: 4px;
+  }
+ 
+  button:hover {
+    opacity: 0.75;
+  }
+ 
+  #ImgUsuario{
+     height: 40px;
+     border-radius: 100%;
+  }
+ 
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  li:hover {
+    background-color: #ddd;
+    border-radius: 8px;
+  }
+ 
+  .CorBotaoDeletarAlterar {
+    background-color: rgb(122, 36, 219);
+    float: right;
+    margin-top:-3px;
+    margin-left:-1px;
+  }
+ 
+  .CorBotaoDeletarExcluir {
+    background-color: rgb(235, 44, 44);
+    float: right;
+    margin-top:-3px;
+    margin-left:-1px;
+  }
+  
+  .listaBtn {
+    float: right;
+    margin: 0 0 0 4px;
+    position: relative;
+    bottom: 3px;
+  }
+  
+  span {
+    position: relative;
+    bottom: 3px;
+  }
+ 
+  

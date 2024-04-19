@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>
+      Página Index
+   </title>
+   <link rel="stylesheet" href="css/css.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+   <script src="js/firebaseconfig.js"></script>
+
+</head>
+
+<body>
+
+
+   <div id="app" class="center">
+
+      <div class="center">
+         <button id="btnAlergias" class="corBotaoCadastrar">Alergias</button>
+         <button id="btnAnimais" class="corBotaoCadastrar">Animais</button>
+         <button id="btnSair" class="corBotaoCadastrar">Sair</button>
+         <button id="btnExcluir" class="corBotaoDeletar">Excluir Conta</button>
+
+      </div>
+      <br />
+
+      <br />
+      <!--QUANDO O USUÁRIO ESTIVER LOGADO-->
+      <div id="log" class="oculta center">
+         <div id="Logado">
+            <img id="imgUsuario">
+            <h3 id="usuarioLogadoTitulo">Usuário autenticado: </h3>
+            <!--    <p id="verificaEmail"></p>
+         <div id="enviaVerificaEmail">
+            <button class="corBotaoCadastrar" onclick="verificaEmail()">Verificar E-mail</button>
+         </div>
+-->
+         </div>
+      </div>
+
+      <!--FORMULÁRIO DE AUTENTICAÇÃO-->
+      <div id="auth" class="center">
+         <form id="frmAutentica">
+            <h3 id="frmAutenticaTitulo">Controle de Acesso</h3>
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="E-mail" id="email">
+
+            <label for="senha">Senha:</label>
+            <input type="password" placeholder="Senha" id="senha">
+
+            <button type="submit" id="frmAutenticaSubmit">Acessar</button>
+         </form>
+
+
+         <!--CADASTRAR UMA NOVA CONTA-->
+         <p id="registrar">
+            Não possui cadastro?
+            <button id="btnCadastro" class="corBotaoCadastrar">Cadastrar uma conta</button>
+         </p>
+
+         <!--ACESSAR CONTA JÁ EXISTENTE-->
+         <p id="acessar" class="oculta">
+            Já possui cadastro?
+            <button id="btnAcesso" class="corBotaoCadastrar">Acessar</button>
+         </p>
+
+      </div>
+   </div>
+   <!-- Script de Configuração -->
+
+   <script src="js/autentica.js"></script>
+
+</body>
+
+</html>

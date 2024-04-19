@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Animais - CRUD (Create, Read, Update, Delete)
+    </title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+    <h1>Animais</h1>
+        <table>
+            <tr>
+                <td>
+                    <form id="form">
+                        <div>
+                            <label>Nome</label>
+                            <input type="text" required="required" id="nome" name="nome">
+                        </div>
+                        <div>
+                            <label>Clase</label>
+                            <input type="text" required="required" id="classe" name="classe">
+                        </div>
+                        <div>
+                            <label>nascimento</label>
+                            <input type="text" required="required" id="nascimento" name="nascimento">
+                        </div>
+                        <div>
+                            <label>raca</label>
+                            <input type="text" required="required" id="raca" name="raca">
+                        </div>
+                        <div>
+                            <label>porte</label>
+                            <input type="text" required="required" id="porte" name="porte">
+                        </div>
+                        <div>
+                            <label>genero</label>
+                            <input type="text" required="required" id="genero" name="genero">
+                        </div>
+                        <div>
+                            <label>cor</label>
+                            <input type="text" required="required" id="cor" name="cor">
+                        </div>
+                        <div>
+                            <label>peso</label>
+                            <input type="text" required="required" id="peso" name="peso">
+                        </div>
+                        <div>
+                            <label>anamnese</label>
+                            <input type="text" required="required" id="anamnese" name="anamnese">
+                        </div>
+                        <div>
+                            <label>tutor</label>
+                            <input type="text" required="required" id="tutor" name="tutor">
+                        </div>
+                        <div>
+                            <label>alergias</label>
+                            <select id="listaAlergias"></select>
+                            <input type="button" id="adicionaAlergia"
+                            value="Adiciona">
+                        </div>
+                        <div>
+                            <label>Alergias do Animal</label>
+                            <select id="alergias" multiple></select>
+                        </div> 
+                        <div  >
+                            <input type="button" value="Gravar" id="botao" name="botao">
+                            <input type="button" value="Limpar" id="limpar" name="limpar">
+                        </div>
+                        <div id="erros"></div>
+                    </form>
+                </td>
+                <td>
+                    <table class="list" id="lista">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>alergias</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </td>
+                
+            </tr>
+        </table>
+
+
+    <script src="js/classes.js"></script>
+    <script src="js/script_animal.js"></script>
+</body>
+
+</html>

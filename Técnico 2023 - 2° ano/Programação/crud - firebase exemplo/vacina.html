@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Vacinas - CRUD (Create, Read, Update, Delete)
+    </title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+    <h1>Vacinas</h1>
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div>
+                        <label>Descrição</label>
+                        <input type="text" required="required" name="descricao" id="descricao">
+                        <label>Valor</label>
+                        <input type="text" required="required" name="valor" id="valor">
+                    </div>
+                    <div>
+                        <input type="button" value="Gravar" id="botao" name="botao">
+                        <input type="button" value="Limpar" id="limpar" name="limpar">
+                    </div>
+                    <div id="erros"></div>
+                </form>
+            </td>
+            <!-- comentário -->
+            <td>
+                <table class="list" id="lista">
+                    <thead>
+                        <tr>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Script de Configuração -->
+    <script src="js/firebaseconfig.js"></script>
+    <!-- Script de Teste -->
+    <script src="js/classes.js"></script>
+    <script src="js/vacinaDAO.js"></script>
+    <script src="js/script_vacina.js"></script>
+</body>
+
+</html>
