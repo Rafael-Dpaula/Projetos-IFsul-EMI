@@ -1,0 +1,71 @@
+.cabeçalho{
+text-align: center;
+background-color: black;
+font-family: Arial;
+border: none;
+height: 105x;
+color: white;
+font-size: 42px;
+padding-top: 5px;
+padding-bottom: 5px;
+margin-bottom: none;
+margin-top:none;
+}
+
+.fontes{
+    font-size: 36px;
+}
+
+.labels{
+font-size: 24px;
+font: black;
+font-family: cursive;
+margin-left: 15px;
+}
+
+.rodape{
+text-align: center;
+font-family: Cambria;
+background-color: darkgray;
+height:124px;
+font: black bold;
+}
+
+.inputs{
+width: 200px;
+height:24px;
+background-color: white;
+font: black;
+margin-right: 30px;
+}
+
+.resultados{
+    background-color: black;
+    color: white    ;
+    text-align: left;
+    text-decoration: underline solid white;
+    font-size: 36px;
+}
+
+.resultado{
+font: black;
+font-family: cursive;
+font-size: 18px;
+}
+
+.buttons{
+    height: 50px;
+    width: 160px;
+    background-color: limegreen;
+    font: black bold;
+    border: 2px solid black;
+    text-align: center;
+    font-family:cursive;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.buttons:hover{
+    background-color: green;
+    text-decoration: underline solid black;
+}

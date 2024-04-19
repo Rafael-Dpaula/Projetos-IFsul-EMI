@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="theme.css" type="text/css">
+</head>
+<body>
+    <div class="corpo">
+        <div class="cabeçalho">
+            <p style="margin-top:10px;margin-bottom:0px;">Trabalho de Programação</p>
+            <p style="margin-bottom:0px;margin-top:0px;font-size:30px;font-family: cursive;">Problema Nº 3</p>
+        </div>
+        <form action="#">
+            <p style="margin-top: 6px;" class="fontes">Informações da Planta:</p>
+            <label class="labels" for="name">Nome da Planta: </label>
+            <input class="inputs" id="name" type="text" placeholder="_________________________________________">
+            <br><br>
+            <p class="fontes" style="margin-top: 6px;">Dados das folhas da planta:</p>
+            <label class="labels" for="peso">Peso: </label>
+            <input id="peso" class="inputs" type="number" placeholder="000000">
+
+            <label class="labels" for="width">Comprimento: </label>
+            <input type="number" id="width" class="inputs" placeholder="000000">
+
+            <button type="button" class="buttons" id="calc" onclick="calcular()">Cálcular</button>
+        </form>
+        <div>
+            <p class="resultados">Resultados:</p>
+
+            <p id="escplanta" class="resultado"><p id="nomeplanta"></p></p><!--nome da planta-->
+
+            <p class="resultado" id="escppar"><p id="ppar"></p></p><!--array peso par crescente-->
+            <p class="resultado" id="escpimp"><p id="pimpar"></p></p><!--array peso impar crescente-->
+
+            <p class="resultado" id="esccpar"><p id="cpar"></p></p><!--array compi par crescente-->
+            <p class="resultado" id="esccimp"><p id="cimpar"></p></p><!--array compri impar crescente-->
+
+            <p class="resultado" id="escpmaior"><p id="pmaior"></p></p><!--peso maior-->
+            <p class="resultado" id="escpmenor"><p id="pmenor"></p></p><!--peso menor-->
+
+            <p class="resultado" id="esccmaior"><p id="cmaior"></p></p><!--comprimento maior-->
+            <p class="resultado" id="esccmenor"><p id="cmenor"></p></p><!--comprimento menor-->
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div><!--rodape-->
+            <p class="rodape">IFSUL - Câmpus Passo Fundo. <br> Estrada perimetral Leste, 150, Passo Fundo - RS. CEP: 99064-440 <br> Telefone:(54)3311-2916 <br> Turma - 1 Ano Informática <br> Problema - 3 <br> @Rafael A. de Paula </p>
+        </div>
+    </div>
+</body>
+</html>
