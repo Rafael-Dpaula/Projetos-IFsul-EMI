@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu card de RPG</title>
+    <link rel="stylesheet" href="../texturas/texturas.css">
+</head>
+
+<body>
+    <h1 class="titulo_principal">Criador de Card de RPG</h1>
+    <div class="div_grande"><!--Div grande-->
+        <div class="div_seletores"><!--div dos seletores-->
+            <p class="titles">Perícias: dois cliques para adicionar</p><select multiple id="pericias"></select><br>
+            <!--CLASSES DE PERSONAGEM-->
+            <p class="titles">Classes:</p>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Mago" required>Mago</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Clérigo" required>Clérigo</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Bárbaro" required>Bárbaro</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Mercenário" required>Mercenário</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Assassino" required>Assassino</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Necromante" required>Necromante</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Caçador" required>Caçador</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Paladino" required>Paladino</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Batedor Rúnico" required>Batedor Rúnico</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Bardo" required>Bardo</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Arqueiro" required>arqueiro</label>
+            <label><input id="radios letras" type="radio" name="opcoes" value="Cavaleiro" required>Cavaleiro</label>
+
+            <p class="titles">Raças:</p><select id="racas"></select>
+            <br><br><br>
+
+            <input type="button" value="Tema Claro" class="botao_claro" id="btn_claro">
+            <input type="button" value="Tema Escuro" class="botao_escuro" id="btn_escuro">
+        </div>
+
+        <div class="div_inputs"><!--div dos inputs-->
+            <p class="titles">Atributos: </p><!--ATRIBUTOS DO PERSONAGEM-->
+            <label class="input_label" for="">Nível de Força: <input type="number" id="forca"
+                    style="font-family: cursive;" name="atributo" placeholder="1 - 100"></label><br><br>
+            <label class="input_label" for="">Nível de Agilidade: <input type="number" id="destreza"
+                    style="font-family: cursive;" name="atributo" placeholder="1 - 100"></label><br><br>
+            <label class="input_label" for="">Classe de Armadura: <input type="number" id="armadura"
+                    style="font-family: cursive;" name="atributo" placeholder="1 - 100"></label>
+            <br>
+            <p class="titles">Descrição: </p><!--INFORMAÇÕES GERAIS DO PERSONAGEM-->
+            <label for="" class="label_P" id="letras">Nome do Herói: <input type="text" id="nome" class="nome_P"
+                    style="font-family: cursive;" placeholder="Nome..."></label><br><br>
+            <p class="label_P">Perícias selecionadas: clique para remover </p>
+            <select id="peri_seleci" multiple class="peri_seleci" cols="30" rows="10"></select>
+            <input type="file" id="imagem" name="imagem" class="send_img">
+            <br><br><br><br><br><br><br><br>
+            <!--BOTÕES-->
+            <input type="button" value="Limpar" id="limpar_botao" class="botao_create_reset">
+            <input type="submit" value="Criar Card" id="criarcard" class="botao_create_reset">
+        </div>
+    </div><br><br><br>
+    <div class="card" id="card"><!--CARD QUE SERÁ GERADO-->
+        <div class="img"><img src="" id="imagem_card" name="imagem_card" height="165px" width="165px"></div>
+        <p id="nome_card" name="card"></p>
+        <p class="classe_card" name="card">classe: </p>
+        <p class="classe_card" name="card" id="classe_selecionada"></p>
+        <p class="raca_card" name="card" id="raca_selecionada"></p>
+        <p class="raca_card raca" name="card">Raça: </p><br>
+        <p class="esc_atri" name="card">Atributos</p>
+        <p name="card" class="esc_peri">Perícias:</p><br>
+        <div class="armadura" id="atributes"> <br> <p class="narm" name="card" id="narma"></p></div>
+        <div class="forca" id="atributes"><br><p class="nfor" name="card" id="nforc"></p></div>
+        <div class="agilidade" id="atributes"><br><p class="nagi" name="card" id="nagil"></p></div>
+        <table name="per_selec" id="per_selec" class="per_selec">
+
+        </table>
+        <br><br><br><br>
+        <p class="rdp">&copy Rafael A. de Paula</p>
+    </div> <br><br><br><br>
+    <script src="../scripts/trabalho.js"></script>
+</body>
+</html>

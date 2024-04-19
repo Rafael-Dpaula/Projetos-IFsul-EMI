@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu card de RPG</title>
+    <link rel="stylesheet" href="../texturas/texturas.css">
+</head>
+
+<body>
+    <p class="titulo_principal">Criador de Card de RPG</p>
+    <div class="div_grande"><!--Div grande-->
+        <div class="div_seletores"><!--div dos seletores-->
+            <p class="titles">Perícias: dois cliques para adicionar</p><select multiple id="pericias"></select><br>
+            <!--CLASSES DE PERSONAGEM-->
+            <p class="titles">Classes:</p>
+            <label><input type="radio" name="opcoes" value="clerigo">Clérigo</label>
+            <label><input type="radio" name="opcoes" value="mago">Mago</label>
+            <label><input type="radio" name="opcoes" value="necromante">Necromante</label>
+            <label><input type="radio" name="opcoes" value="barbaro">Bárbaro</label>
+            <label><input type="radio" name="opcoes" value="mercenario">Mercenário</label>
+            <label><input type="radio" name="opcoes" value="assassino">Assassino</label>
+            <label><input type="radio" name="opcoes" value="cacador">Caçador</label>
+            <label><input type="radio" name="opcoes" value="paladino">Paladino</label>
+            <label><input type="radio" name="opcoes" value="batedor">Batedor Rúnico</label>
+            <label><input type="radio" name="opcoes" value="bardo">Bardo</label>
+            <label><input type="radio" name="opcoes" value="arqueiro">arqueiro</label>
+            <label><input type="radio" name="opcoes" value="cavaleiro">Cavaleiro</label>
+
+            <p class="titles">Raças:</p><select id="racas"></select>
+        </div>
+
+        <div class="div_inputs"><!--div dos inputs-->
+            <p class="titles">Atributos: </p>
+            <label class="input_label" for="">Nível de Força: <input type="number" id="forca"
+                    name="atributo"></label><br><br>
+            <label class="input_label" for="">Nível de Destreza: <input type="number" id="destreza"
+                    name="atributo"></label><br><br>
+            <label class="input_label" for="">Classe de Armadura: <input type="number" id="armadura"
+                    name="atributo"></label>
+            <br>
+            <p class="titles">Descrição: </p>
+            <label for="" class="label_P">Nome do Herói: <input type="text" id="nome" class="nome_P" placeholder="Nome..."></label><br><br>
+            <p class="label_P">Perícias selecionadas: clique para remover </p>
+            <select id="peri_seleci" multiple class="peri_seleci" cols="30" rows="10" ></select>
+
+            <br><br><br><br><br><br><br><br><br><br>
+            <input type="button" value="Limpar" id="limpar" class="botao_create_reset">
+            <input type="button" value="Criar Card" id="criarcard" class="botao_create_reset">
+
+        </div> 
+    </div><br><br><br><br><br><br><br>
+    <script src="../scripts/trabalho_alpha2.js"></script>
+</body>
+
+</html>

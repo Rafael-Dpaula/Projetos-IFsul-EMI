@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            border: 3px solid black;
+            height: 14.75cm;
+            width: 11.7cm;
+            border-radius: 25px;
+            margin-left: 4cm;
+            display: block;
+            background-image: url("../texturas/textura_de_papel_antigo.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        .img{
+            border: 2px solid limegreen;
+            height: 4cm;
+            width: 4cm;
+            align-content: center;
+            margin-left: 3.8cm;
+            margin-top: 4mm;
+        }
+        #atributes{
+            width: 40px; height: 40px; border: 2px solid black;
+            margin-left: 20px;
+            display: inline-block;
+            margin-bottom: none;
+        }
+        .forca{
+            background-image: url("../texturas/simbolo_forca.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .agilidade{
+            background-image: url("../texturas/simbolo_agilidade.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .armadura{
+            background-image: url("../texturas/simbolo_armadura.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .nfor{
+            display:inline-block;
+            margin-left: 35px;
+            margin-top: 0px;
+            font-size: 20px;
+            font-family: cursive;
+            font: bolder;
+        }
+        .narm{
+            display:inline-block;
+            margin-left: 55px;
+            font-size: 20px;
+            font-family: cursive;
+            font: bolder;
+        }
+        .nagi{
+            display:inline-block;
+            margin-left: 50px;
+            font-size: 20px;
+            font-family: cursive;
+            font: bolder;
+        }
+        #nome_card{
+            text-align: center;
+            font-size: 23px;
+            font-family: cursive;
+            font: bolder;
+            margin: 0.1mm;
+            margin-top: 2mm;
+        }
+        .classe_card{
+            margin-left: 20px;
+            font-size: 21px;
+            font: bold;
+            font-family: cursive;
+            display: inline-block;
+
+        }
+        .raca_card{
+            margin-right: 70px;
+            margin-left: 10px;
+            font-size: 21px;
+            font: bold;
+            font-family: cursive;
+            display: inline-block;
+            float: right;
+        }
+        .raca{
+            margin-right: 10px;
+        }
+        .esc_atri{
+            display: inline-block;
+            margin-left: 65px;
+            font-size: 21px;
+            font-family: cursive;
+            font: bolder;
+        }
+        .esc_peri{
+            display: inline-block;
+            margin-right: 85px;
+            font-size: 21px;
+            font-family: cursive;
+            font: bolder;
+            float: right;
+        }
+        .per_selec{
+            float: right;
+            display: inline-block;
+            margin-right: 35px;
+        }
+        li{
+            font: bolder;
+            font-size: 19px;
+            float: right;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="card">
+        <div class="img"></div>
+        <p id="nome_card"> rafael de paula</p>
+        <p class="classe_card">classe: </p><p class="classe_card"> arqueiro</p>
+        <p class="raca_card">elfo</p><p class="raca_card raca">Raça: </p><br>
+        <p class="esc_atri">Atributos</p><p class="esc_peri">Perícias</p><br>
+        <div class="armadura" id="atributes"></div>
+        <div class="forca" id="atributes"></div>
+        <div class="agilidade" id="atributes"></div>
+        <table name="per_selec" id="per_selec" class="per_selec">
+            <li>abacate</li>
+        </table>
+        <br>
+        <p class="nfor" id="nforc">1</p>
+        <p class="narm" id="namrm">2</p>
+        <p class="nagi" id="nagil">3</p>
+        
+    </div>
+</body>
+</html>
