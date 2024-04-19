@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Pedido</h1>
+        <div><a href="Cliente.html">Clientes</a></div>
+        <div><a href="Produtos.html">Produtos</a></div>
+    </div><br>
+    <div id='log'>
+        <div>
+            <h3 id="usuarioLogadoTitulo">Usuário autenticado: </h3>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div>
+                        <label for="desc">Descrição:</label>
+                        <input type="text" id="desc" placeholder="Descrição"><br>
+
+                    </div>
+                    <div>
+                        <br>
+                        <label for="clientes">Cliente(s) do Pedido:</label>
+                        <select id="clientes" multiple></select>
+                    </div>
+
+                    <label for="valorTotal">Valor</label>
+                    <input type="text" id="valorTotal" placeholder="Valor"><br>
+
+                    <label for="hrPedido">Horário</label>
+                    <input type="text" id="hrPedido" placeholder="Horário">
+
+                    <label for="dtPedido">Data</label>
+                    <input type="text" id="dataPedido" placeholder="Data">
+
+                    <label for="listaProdutos">Produtos</label>
+                    <select id="listaProdutos" aria-placeholder="Produtos"></select>
+
+                    <input type="button" id="adicionaProduto" value="Adicionar Produto"><br>
+                    </div>
+                    <br>
+                    <label for="produtos">Produtos do Pedido:</label>
+                    <select id="produtos" multiple></select>
+                    <div>
+                        <button type="button" id="botao">Registrar</button><br>
+                        <button type="button" id="limpar">Limpar</button>
+                        <br><br>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table id="lista">
+                    <thead>
+                        <tr>
+                            <th>Cliente(s):</th>
+                            <th>Descrição:</th>
+                            <th>Valor:</th>
+                            <th>Hora:</th>
+                            <th>Data:</th>
+                            <th>Produto(s):</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#valorTotal").mask("R$" + "000000");
+            $("#hrPedido").mask("00:00:00");
+            $("#dtPedido").mask("00/00/0000");
+        });
+    </script>
+    <script src="Scripts/firebaseconfig.js"></script>
+    <script src="Scripts/Classes.js"></script>
+    <script src="Scripts/ProdutoDAO.js"></script>
+    <script src="Scripts/ClienteDAO.js"></script>
+    <script src="Scripts/PedidoDAO.js"></script>
+    <script src="Scripts/Pedido.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+    <h1>Cliente</h1>
+
+    <div id="log">
+        <div id="Logado">
+            <h3 id="usuarioLogadoTitulo">Usuário autenticado: </h3>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div>
+                        <label>Nome</label>
+                        <input type="text" required="required" name="nome" id="nome">
+                    </div>
+                    <div>
+                        <label>Genero</label>
+                        <select type="text" required="required" name="genero" id="genero">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Nao Binario">Não Binário</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>CPF</label>
+                        <input type="text" required="required" name="cpf" id="cpf">
+                    </div>
+                    <div>
+                        <label>Data de Nascimento</label>
+                        <input type="date" required="required" name="dtNascimento" id="dtNascimento">
+                    </div>
+                    <div>
+                        <label>Cidade</label>
+                        <input type="text" required="required" name="cidade" id="cidade">
+                    </div>
+                    <div>
+                        <label>UF</label>
+                        <input type="text" required="required" name="uf" id="uf">
+                    </div>
+                    <div>
+                        <label>Forma de Pagamento</label>
+                        <select type="text" required="required" name="formaPgto" id="formaPgto">
+                            <option value="pix">Pix</option>
+                            <option value="pix">Crédito</option>
+                            <option value="pix">Débito</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Telefone</label>
+                        <input type="text" required="required" name="fone" id="fone">
+                    </div>
+                    <div>
+                        <label>Endereço</label>
+                        <input type="text" required="required" name="endereco" id="endereco">
+                    </div>
+
+                    <div>
+                        <input type="button" value="Gravar" id="botao" name="botao">
+                        <input type="button" value="Limpar" id="limpar" name="limpar">
+                    </div>
+                    <div id="erros"></div>
+                </form>
+            </td>
+            <td>
+                <div class="center">
+                    <label for="filtro">Buscar: </label>
+                    <input type="text" placeholder="Digite aqui para consultar" id="filtro">
+                    <input type="button" value="Filtrar" id="btnFiltrar" name="btnFiltrar">
+                </div>
+                <br>
+                <table class="list" id="lista">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cpf</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Cidade/UF</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="Scripts/firebaseconfig.js"></script>
+    <script src="Scripts/classes.js"></script>
+    <script src="Scripts/ClienteDAO.js"></script>
+    <script src="Scripts/Cliente.js"></script>
+</body>
+
+</html>

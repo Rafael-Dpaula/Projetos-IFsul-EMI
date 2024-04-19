@@ -1,0 +1,80 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../textura_de_madeira_clara.jpeg);
+    background-size: cover;
+
+}
+
+div[id='redirect'] button{
+    align-items: center;
+    border: 1.5px solid;
+    border-radius: 20%;
+    color: white;
+    font-size: 16px;
+    font-family: 'Courier New';
+    background-color:  dimgrey;
+    margin-top: 20px;
+}
+
+button{
+    margin-right: 10px;
+    border-radius: 20%;
+    background-color: gray;
+    color: white;
+    font-family: 'Courier New';
+    font-weight: bolder;
+}button:hover{
+    transition: 0.5s;
+    scale: 1.2;
+    cursor: pointer;
+}
+
+#display{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+}
+
+#app{
+    width: max-content;
+    align-items: center;
+    display: block;
+    border: 0px transparent;
+}
+
+#auth, #frmAutenticaTitulo{
+    margin: 0px;
+    padding: 0px;
+}
+
+.caixa{
+    border-radius: 10%;
+    width: max-content;
+    align-items: center;
+    padding: 15px;
+    transform: scale(1.03);
+    scale: 1.03;
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.25);
+    background-color: dimgray;
+    color: white;
+    cursor: default;
+    font-family: Arial;
+}
+
+.caixa button{
+    background-color: white;
+    color: black;
+}
+
+.caixa button:hover{
+    background-color: lime;
+    transition: 0.5s;
+    scale: 1;
+}
+

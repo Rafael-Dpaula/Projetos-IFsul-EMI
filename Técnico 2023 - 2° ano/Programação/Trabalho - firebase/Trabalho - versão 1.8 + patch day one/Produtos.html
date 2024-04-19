@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - CRUD</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="Scripts/firebaseconfig.js"></script>
+</head>
+
+<body>
+    <div id="log"><br>
+        <h1>Produtos</h1>
+        <div id="Logado">
+            <div id="redirect">
+                <span class="redirecionar"><a style="margin-right: 10px;" href="Cliente.html">Clientes</a>
+                    <a href="Pedido.html">Pedidos</a></span>
+            </div>
+            <div value="usuario">
+                <a style="display: flex; align-items: center; padding-bottom: 10px; margin-bottom: 10px; color: black; text-decoration: none; width: fit-content;"
+                    href="index.html"><img src="login.png" class="image" width="50px" height="50px"
+                        style="margin-left: 30px; margin-right: 10px;">
+                    <h3 id="usuarioLogadoTitulo"></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <form id="form" style="margin-right: -200x;">
+                    <div>
+                        <label for="nome">Nome: </label><input type="text" id="nome" placeholder="Nome"><br>
+                        <label for="marca">Marca: </label><input type="text" id="marca" placeholder="Marca"><br>
+                        <label for="preco">Preço: </label><input type="text" id="preco" placeholder="Preço">
+                        <label for="desconto">Desconto: </label><input type="text" id="desconto"
+                            placeholder="Desconto"><br><br>
+                        <div>
+                            <input type="button" id="botao" value="Registrar">
+                            <input type="button" id="limpar" value="Limpar">
+                        </div>
+                </form>
+            </td>
+            <td class="mostra">
+                <table id="lista" class="list">
+                    <thead>
+                        <div>
+                            <input type="text" placeholder="Digite aqui para consultar" id="filtro">
+                            <input type="button" value="Filtrar" id="btnFiltrar"></input>
+                        </div>
+                        <tr>
+                            <th>Nome:</th>
+                            <th>Marca:</th>
+                            <th>Preço:</th>
+                            <th>Desconto:</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#preco").mask("R$000");
+            $("#desconto").mask("00%");
+        });
+    </script>
+    <script src="Scripts/Classes.js"></script>
+    <script src="Scripts/ProdutoDAO.js"></script>
+    <script src="Scripts/Produto.js"></script>
+</body>
+
+</html>

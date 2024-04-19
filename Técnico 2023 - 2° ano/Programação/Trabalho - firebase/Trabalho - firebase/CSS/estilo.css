@@ -1,0 +1,165 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+h1{
+        margin: 0px;
+        padding: 0px;
+    }
+div[id='campos']{
+    width: fit-content;
+}
+
+div[id='log']{
+    background-color: palegreen;
+    font-family: Arial;
+    padding-top: 25px;
+
+}
+
+div[id='log'] h1{
+    text-align: center;
+}
+div[id='log'] h3{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+form[id='form']{
+    display: inline-block;
+    margin-left: 25px;
+    width: 50%;
+    height: auto;
+    font-size: large;
+
+}
+
+input, select{
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+label{
+    color: black;
+    font-family: Arial;
+}
+
+.list{
+    font-size: large;
+    font-family: Arial;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    
+}
+
+#lista td{
+    display: table-cell;
+    vertical-align: middle;
+    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+    margin: 0px;
+    font-size: large;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-family: Arial;
+    text-align: center;
+    align-items: center;
+}
+
+#lista th{
+    margin: 0px;
+    align-content: center;
+    text-align: center;
+    padding: auto;
+    font-size: large;
+    background-color: lawngreen;
+
+}
+
+#lista tr:nth-child(even){background-color: palegreen;}
+
+select, input[type='date']{
+    width: 177px;
+    border: 2px solid ;
+}
+
+input[id='filtro']{
+    width: 70%;
+    height: 21px;
+} input[id='btnFiltrar'], input[id='botao'], input[id='limpar'], input[id='adicionaProduto']{
+    align-items: center;
+    display: inline-block;
+    background-color: white;
+    border: 1.5px solid;
+    border-radius: 0%;
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New';
+}
+
+input[id='btnFiltrar']:hover,  input[id='botao']:hover, input[id='limpar']:hover, input[id='adicionaProduto']:hover{
+    background-color: limegreen;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.filtro{
+    font-family: Arial;
+    font-size: 20px;
+    color: black;
+}
+
+input[value='alterar'], input[value='excluir']{
+    align-items: center;
+    border: 1.5px solid;
+    border-radius: 0%;
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New';
+    background-color: white;
+}
+input[value='alterar']:hover, input[value='excluir']:hover{
+    background-color: limegreen;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+
+tr{
+    font-size: 16px;
+    font-family: Arial;
+    color: black;
+    justify-content: center;
+    
+}
+
+div[value='usuario'] a:hover, h3:hover{
+    transition: 0.5s;
+    font-size: larger;
+    text-decoration: underline solid 1px;
+    cursor: pointer;
+}
+
+.redirecionar{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Courier New';
+    font-size: medium;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Courier New';
+    font-weight: bolder;
+}
+
+.redirecionar a:hover{
+    transition: 0.5s;
+    font-size: 22px;
+    text-decoration: underline solid 1px;
+}
+
+a{
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}

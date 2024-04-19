@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="Scripts/firebaseconfig.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 style="align-items: center; justify-content: center; text-align: center; margin: 0px; font-size: 30px; font-family: Arial; color: white;">Lancheria D'paula</h1>
+        <div id="redirect" style="justify-content: center;align-items: center; display: flex; text-align: center;">
+            <button id="btnProdutos">Produtos</button>
+            <button id="btnPedidos">Pedidos</button>
+            <button id="btnSair">Sair</button>
+        </div>
+        <br/>
+        <br/>
+        <div class="caixa">
+            <div id="log">
+                <div id="Logado" style="justify-content: center; display: flex; align-items: center;">
+                    <img src="login1.jpeg" width="150px" height="150px">
+                    <h3 id="usuarioLogadoTitulo" style="justify-content: center; display: flex; align-items: center;">
+                        Usuário autenticado: </h3>
+                </div>
+            </div>
+            <div id="display">
+                <div id="auth">
+                    <form id="frmAutentica">
+                        <h3 id="frmAutenticaTitulo">Controle de Acesso</h3>
+                        <label for="email">E-mail:</label>
+                        <input type="email" placeholder="E-mail" id="email"> <br> <br>
+                        <label for="senha">Senha:</label>
+                        <input type="password" placeholder="Senha" id="senha">
+                        <button type="submit" id="frmAutenticaSubmit">Acessar</button>
+                    </form>
+                    <p id="registrar">
+                        Não possui cadastro?
+                        <button id="btnCadastro">Cadastrar</button>
+                    </p>
+                    <p id="acessar" style="display: none;">
+                        Já possui cadastro?
+                        <button id="btnAcesso">Acessar</button>
+                    </p>
+                </div>
+            </div>
+            <p style="align-items: center; justify-content: center; text-align: center; margin: 0px;">&copy Rafael A. de Paula</p>
+        </div>
+
+        <script src="Scripts/autentica.js"></script>
+
+</body>
+
+</html>

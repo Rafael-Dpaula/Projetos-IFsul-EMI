@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+    
+    <div id="log"><br>
+        <h1>Cliente</h1>
+        <div id="Logado">
+            <div id="redirect">
+                <span class="redirecionar"><a style="margin-right: 10px;" href="Produtos.html">Produtos</a> 
+                <a href="Pedido.html">Pedido</a></span>
+            </div>
+            <div value="usuario">
+            <a style="display: flex; align-items: center; padding-bottom: 10px; margin-bottom: 10px; color: black; text-decoration: none; width: fit-content;" href="index.html"><img src="login.png" class="image" width="50px" height="50px" style="margin-left: 30px; margin-right: 10px;">
+            <h3 id="usuarioLogadoTitulo"></h3></a>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div id="campos">
+                        <label>Nome</label>
+                        <input type="text" required="required" name="nome" id="nome">
+                    </div>
+                    <div id="campos">
+                        <label>Genero</label>
+                        <select type="text" required="required" name="genero" id="genero">
+                            <option value="...">...</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Nao Binario">Não Binário</option>
+                        </select>
+                    </div>
+                    <div id="campos">
+                        <label>CPF</label>
+                        <input type="text" required="required" name="cpf" id="cpf">
+                    </div>
+                    <div id="campos">
+                        <label>Data de Nascimento</label>
+                        <input type="date" required="required" name="dtNascimento" id="dtNascimento">
+                    </div>
+                    <div id="campos">
+                        <label>Cidade</label>
+                        <input type="text" required="required" name="cidade" id="cidade">
+                    </div>
+                    <div id="campos">
+                        <label>UF</label>
+                        <input type="text" required="required" name="uf" id="uf">
+                    </div>
+                    <div id="campos">
+                        <label>Forma de Pagamento</label>
+                        <select type="text" required="required" id="formaPgto">
+                            <option value="...">...</option>
+                            <option value="pix">Pix</option>
+                            <option value="Crédito">Crédito</option>
+                            <option value="Débito">Débito</option>
+                        </select>
+                    </div>
+                    <div id="campos">
+                        <label>Telefone</label>
+                        <input type="text" required="required" id="fone">
+                    </div>
+                    <div id="campos">
+                        <label>Endereço</label>
+                        <input type="text" required="required" id="endereco">
+                    </div>
+                    <div>
+                        <input type="button" value="Gravar" id="botao" name="botao">
+                        <input type="button" value="Limpar" id="limpar" name="limpar">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <div>
+                    <label class="filtro">Buscar: </label>
+                    <input type="text" placeholder="Digite aqui para consultar" id="filtro">
+                    <input type="button" value="Filtrar" id="btnFiltrar" name="btnFiltrar">
+                </div>
+                <br>
+                <table class="list" id="lista">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cpf</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Cidade/UF</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fone").mask('(00)0 0000-0000');
+            $("#uf").mask('AA');
+            $("#cpf").mask('000.000.000-00');
+        });
+    </script>
+
+    <script src="Scripts/firebaseconfig.js"></script>
+    <script src="Scripts/classes.js"></script>
+    <script src="Scripts/ClienteDAO.js"></script>
+    <script src="Scripts/Cliente.js"></script>
+</body>
+
+</html>
