@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho - CRUD</title>
+</head>
+
+<body>
+    <h1>Cliente - Crud</h1>
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div>
+                        <label for="nome">Nome: </label><input type="text" id="nome" placeholder="nome" required> <br>
+                        <label for="genero">Genero: <input type="text" id="genero" placeholder="genero" required> <br>
+                            <label for="cpf">Cpf: <input type="text" id="cpf" placeholder="---.---.--- - --" required><br>
+                                <label for="dtNascimento">Data de nascimento: <input type="date" id="dtNascimento" placeholder="data de nascimento" required><br>
+                                    <label for="endereco">endereço: <input type="text" id="endereco" placeholder="endereço" required><br>
+                                        <label for="fone">Fone: <input type="text" id="fone" placeholder="Fone" required><br>
+                                    <label for="cidade">cidade: <input type="text" id="cidade" placeholder="cidade" required><br>
+                                        <label for="uf">UF: <input type="char" max(2) id="uf" placeholder="UF" required><br>
+                                        <label for="frmPgto">forma de Pagamento: <select name="frmPgto" id="frmPgto" required>
+                                                <option value="A vista">a vista</option>
+                                                <option value="Débito">Débito</option>
+                                                <option value="Crédito">Crédito</option>
+                                                <option value="Pix">Pix</option>
+                                            </select> <br>
+                                            <label>pedido: <input type="text" id="pedido" placeholder="pedido" required>
+                    </div><br>
+                    <div>
+                        <button type="button" id="enviar">Finalizar</button>
+                        <button type="button" id="limpar">Limpar</button>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table id="lista">
+                    <thead>
+                        <tr class="mostrar">
+                            <th>Nome</th>
+                            <th>forma de Pagamento</th>
+                            <th>pedido</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#cpf").mask("000.000.000-00");
+            $("#uf").mask("AA");
+        });
+        </script>
+        <script src="Classes.js"></script>
+        <script src="Cliente.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho - CRUD</title>
+</head>
+
+<!-- VALIDAÇÂO DOS CAMPOS -->
+
+<body>
+    <div class="cabecalho">
+        <h1>Pedido</h1>
+        <div class="cab1"><a href="Cliente.html">Clientes</a></div>
+        <div class="cab2"><a href="Produtos.html">Produtos</a></div>
+    </div><br>
+    <table>
+        <tr>
+            <td>
+                <form id="form" style="margin-right: -200x;">
+                    <div>
+                        <label for="hrPedido">Horário</label>
+                        <input type="time" id="hrPedido" placeholder="Horário">
+                        <label for="valorTotal">Valor</label>
+                        <input type="text" id="valorTotal" placeholder="Valor"><br>
+                        <label for="dataPedido">Data</label>
+                        <input type="date" id="dataPedido" placeholder="Data">
+                        <label for="produtos">Produtos</label>
+                        <select id="produtos" aria-placeholder="Produtos"></select>
+                        <input type="button" id="adicionaCliente" value="Adicionar Produto"
+                            style="font-size: 14px; width: auto; height: auto; float: left; margin-top: 5px;"><br>
+                    </div>
+
+                    <label for="produtos">Produtos do Pedido</label>
+                    <select style="margin-top: 5px; margin-bottom: 5px;" id="produtos" multiple></select>
+
+                    <div>
+                        <button type="button" id="enviar">Registrar</button>
+                        <button type="button" id="limpar">Limpar</button>
+                    </div>
+                </form>
+            </td>
+            <td class="mostra">
+                <table id="lista">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Valor</th>
+                            <th>Produtos</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#valorTotal").mask("R$00.00");
+        });
+    </script>
+    <script src="../Scripts/Classes.js"></script>
+    <script src="../Scripts/Pedido.js"></script>
+</body>
+
+</html>

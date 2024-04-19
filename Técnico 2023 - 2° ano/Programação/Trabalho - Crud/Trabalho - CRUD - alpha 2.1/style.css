@@ -1,0 +1,120 @@
+h1 {
+    font: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: forestgreen;
+    padding: 10px;
+    margin: 0px;
+    cursor: default;
+}
+
+body {
+    margin: 0px;
+}
+
+form {
+    margin: 80px;
+    margin-top: 40px;
+    display: block !important;
+}
+
+input,
+select {
+    width: 100%;
+    font: bolder;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: lightgreen;
+
+}
+
+tr {
+    font: bolder;
+    font-size: 14px;
+    padding: 20px;
+    text-align: left;
+    font-family: cursive;
+    padding-left: 10px ;
+}
+
+
+th {
+    font: bolder;
+    font-size: 14px;
+    padding: 20px;
+    background-color:   lightgreen;
+    border: 1px solid darkolivegreen;
+    text-align: left;
+    margin-right: -2px;
+}
+
+td[id='list'] {
+    font: bolder;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px;
+    text-align: left;
+    border: 2px solid darkolivegreen;
+}
+
+td {
+    margin-bottom: 100% ;
+
+}
+
+label {
+    font: bolder;
+    font-size: 18px;
+    font-family: cursive;
+
+}
+
+button:hover{
+    transform: scale(1.1);
+    scale: 1.1;
+    transition: 0.7s;
+    box-shadow: 0px 8px 20px;
+}
+
+input[type="button"]:hover {
+    transform: scale(1.01);
+    scale: 1.01;
+    transition: 0.7s;
+    box-shadow: 0px 8px 20px;
+}
+
+input, select {
+    cursor: pointer;
+}
+
+select:focus {
+    transition: 0.5s;
+    background-color: chartreuse;
+}
+
+table.lista{
+    width: 100%;
+    background-color: lightgreen;
+    border: 2px solid darkolivegreen ;
+    
+}
+
+table.mostra {
+    margin-top: -100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+button, input[type='button'] {
+    background-color: lawngreen;
+    border: 2px solid darkgreen;
+    font-size: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente - CRUD</title>
+</head>
+
+<body>
+    <div class="cabecalho">
+        <h1>Cliente</h1>
+        <div class="cab1"><a href="Pedido.html">Pedidos</a></div>
+        <div class="cab2"><a href="Produtos.html">Produtos</a></div>
+    </div><br>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <form id="form">
+                        <div>
+                            <label for="nome">Nome: </label><input type="text" id="nome" placeholder="nome" required>
+                            <label for="genero">Genero: <select type="text" id="genero" placeholder="genero" required>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Não-Binário">Não-Binário</option>
+                                    <option value="prefiro não dizer">Prefiro não dizer</option>
+                                    <option value="Raciocínio-Racional">Raciocínio-Racional</option>
+                                </select>
+                                <br>
+                                <label for="cpf">Cpf: <input type="text" id="cpf" placeholder="---.---.--- - --"
+                                        required><br>
+                                    <label for="dtNascimento">Data de nascimento: <input type="date" id="dtNascimento"
+                                            placeholder="data de nascimento" required><br>
+                                        <label for="endereco">endereço: <input type="text" id="endereco"
+                                                placeholder="endereço" required><br>
+                                            <label for="fone">Fone: <input type="text" id="fone" placeholder="Fone"
+                                                    required><br>
+                                                <label for="cidade">cidade: <input type="text" id="cidade"
+                                                        placeholder="cidade" required><br>
+                                                    <label for="uf">UF: <input type="char" max(2) id="uf"
+                                                            placeholder="UF" required><br>
+                                                        <label for="frmPgto">forma de Pagamento: <select name="frmPgto"
+                                                                id="frmPgto" required>
+                                                                <option value="A vista">a vista</option>
+                                                                <option value="Débito">Débito</option>
+                                                                <option value="Crédito">Crédito</option>
+                                                                <option value="Pix">Pix</option>
+                                                            </select> <br>
+                                                            <label for="listaPedidos">Pedido</label>
+                                                            <select id="listaPedidos"></select>
+                                                            <input type="button" id="adicionaCliente"
+                                                                value="Adicionar Pedido"
+                                                                style="font-size: 14px; width: auto; height: auto;
+                                                                float: left; margin-top: 5px; margin-right: 100px;"><br>
+                        </div>
+                        <div>
+                            <label for="pedidos">Pedidos do Cliente</label>
+                            <select style="margin-top: 5px;" id="pedidos" multiple></select>
+                        </div>
+                        <div>
+                            <br>
+                            <button type="button" id="enviar">Finalizar</button>
+                            <button type="button" id="limpar">Limpar</button>
+                            <br><br>
+                        </div>
+                    </form>
+                </td>
+                <td class="mostra">
+                    <table id="lista">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>forma de Pagamento</th>
+                                <th>pedidos</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#cpf").mask("000.000.000-00");
+        $("#uf").mask("AA");
+        $("#fone").mask("(00) 00 0 0000-0000");
+    });
+</script>
+<script src="../Scripts/Classes.js"></script>
+<script src="../Scripts/Cliente.js"></script>
+
+</html>
