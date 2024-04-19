@@ -1,0 +1,14 @@
+.letras{
+    font-family: cursive;
+    text-align: center;
+    cursor: default;
+    padding-top: 10px;
+}
+.letras:hover{
+    text-decoration: underline dashed black;
+}
+.bg{
+    background-color: lightgreen;
+    height: 50px;
+    width: 100%;
+}

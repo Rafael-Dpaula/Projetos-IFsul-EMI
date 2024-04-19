@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 14.03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#9AFF70">
+    <form>
+        <div class="bloco">
+            <p class="letra">Atividade</p>
+
+            <label class="letra">Escolha uma cor:</label>
+            <p class="escrita" style="margin-block-start: 4px; margin-block-end: 0px;"><input type="radio" value="azul" name="cores">Azul </p><br>
+            <p class="escrita" style="margin-block-start: 4px; margin-block-end: 0px;"><input type="radio" value="verde" name="cores">verde </p><br>
+            <p class="escrita" style="margin-block-start: 4px; margin-block-end: 0px;"><input type="radio" value="vermelho" name="cores">vermelho </p><br>
+
+            <label class="letra">Marque suas diciplinas favoritas:</label><br>
+            <input type="checkbox" id="d1" class="disc" value="programação">
+            <label for="d1" class="escrita">Programação</label><br>
+
+            <input type="checkbox" id="d2" class="disc" value="banco de dados">
+            <label for="d2" class="escrita">Banco de Dados</label><br>
+
+            <input type="checkbox" id="d3" class="disc" value="inglês">
+            <label for="d3" class="escrita">Inglês</label><br>
+
+            <input type="checkbox" id="d4" class="disc" value="física">
+            <label for="d4" class="escrita">Física</label><br>
+            <label for="texto" class="escrita">Texto</label>
+            <input type="text" id="texto"><br>
+        <input class="botao" type="button" value="INICIAR" id="btnverificar">
+        <input class="botao" type="button" value="INCLUIR" id="btnincluir">
+        <br>
+    </form></div><p class="escrita" style="font-size: 25px; font-family: 'Times New Roman', Times, serif; font-weight: bolder;margin-left: 44%;margin-top: 20px;cursor: default;">&copy Rafael A. de Paula</p>
+    <div class="resposta" id="resultado"></div><br>
+    <ul id="lista" class="escrita">
+
+    </ul>
+    <script src="dom.js"></script>
+</body>
+</html>

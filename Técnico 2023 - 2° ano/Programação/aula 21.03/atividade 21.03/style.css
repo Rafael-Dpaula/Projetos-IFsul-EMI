@@ -1,0 +1,88 @@
+.letra_titulo{
+    font-size: 43px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin:7px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+}
+.input{
+    background-color: white;
+    font-size: 15px;
+    height: 20px;
+    width: 50%;
+    margin-right: 3px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+.botoes{
+    color:deepskyblue;
+    background-color: rgb(36, 100, 164);
+    transition: all 0.7s;
+    height: 20px;
+    width: 24.5%;
+    border:1px solid transparent;
+    border-radius: 10px;
+    float: right;
+    font-size: 15px;
+    font: bold;
+}
+.botoes:hover{
+    background-color: rgb(0, 132, 255);
+    color: lightblue;
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+    cursor: pointer;
+    border: 1.3px solid black;
+    border-radius: 10px;
+}
+.rodape{
+    font-size: 20px;
+    color: black;
+    background-color: rgb(36, 100, 164);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 120px;
+    margin-top: 0px;
+    padding: 0px;
+    text-align: center;
+    cursor:default;
+}
+.task-list{
+    font-size: 18px;
+    text-align: left;
+    margin-left: 200px;
+    background-color: rgb(24, 136, 249);
+    font-family: cursive;
+    height: 30px;
+    width: 98%;
+    margin-top: 5px;
+    font-weight: bold;
+    color: white;
+    float: right;
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+    transition: all 0.1s;
+    list-style-type: none;
+}
+
+.task-list:hover{
+    background-color: rgb(24, 136, 249);
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+.btn-remove{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 4px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: red;
+    margin-left: 88%;
+    color: white;
+    
+}

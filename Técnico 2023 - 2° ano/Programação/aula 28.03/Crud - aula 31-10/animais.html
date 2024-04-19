@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Animais - CRUD (Create, Read, Update, Delete)
+    </title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+    <h1>Animais</h1>
+    <table>
+        <tr>
+            <td>
+                <form id="form">
+                    <div>
+                        <label>Nome</label>
+                        <input type="text" required="required" name="nome" id="nome">
+                    </div>
+                    <div>
+                        <label>Classe</label>
+                        <input type="text" required="required" name="classe" id="classe">
+                    </div>
+                    <div>
+                        <label>Nascimento</label>
+                        <input type="text" required="required" name="nascimento" id="nascimento">
+                    </div>
+                    <div>
+                        <label>Raça</label>
+                        <input type="text" required="required" name="raca" id="raca">
+                    </div>
+                    <div>
+                        <label>Porte</label>
+                        <input type="text" required="required" name="porte" id="porte">
+                    </div>
+                    <div>
+                        <label>Gênero</label>
+                        <input type="text" required="required" name="genero" id="genero">
+                    </div>
+                    <div>
+                        <label>Cor</label>
+                        <input type="text" required="required" name="cor" id="cor">
+                    </div>
+                    <div>
+                        <label>Peso</label>
+                        <input type="text" required="required" name="peso" id="peso">
+                    </div>
+                    <div>
+                        <label>Anamnese</label>
+                        <input type="text" required="required" name="anamnese" id="anamnese">
+                    </div>
+                    <div>
+                        <label>Tutor</label>
+                        <input type="text" required="required" name="tutor" id="tutor">
+                    </div>
+                    <div>
+                        <label>Alergias</label>
+                        <select id="listaAlergias"></select>
+                        <input type="button" id="adicionaAlergia" 
+                        value="Adiciona">
+                    </div>
+                    <div>
+                        <label>Alergias do Animal</label>
+                        <select id="alergias" multiple></select>
+                    </div>
+                    <div>
+                        <input type="button" value="Gravar" id="botao" name="botao">
+                        <input type="button" value="Limpar" id="limpar" name="limpar">
+                    </div>
+                    <div id="erros"></div>
+                </form>
+            </td>
+            <!-- comentário -->
+            <td>
+                <table class="list" id="lista">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Alergias</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+        <!-- Script de Configuração -->
+        <script src="js/firebaseconfig.js"></script>
+        <!-- Script de Teste -->
+        <script src="js/classes.js"></script>
+        <script src="js/alergiaDAO.js"></script>
+        <script src="js/animalDAO.js"></script>
+        <script src="js/script_animal.js"></script>
+        <!-- comentário -->
+</body>
+
+</html>

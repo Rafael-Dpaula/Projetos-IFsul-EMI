@@ -1,0 +1,24 @@
+
+body{
+    background: #fd3af3;  
+    background: -webkit-linear-gradient(to right, #740558, #ec37c5);  
+    background: linear-gradient(to right, #5a0339, #d10995); 
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input{
+    border-radius: 10px;
+    border-style: none;
+}
+
+h1{
+    color: #FFFF;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table{
+    border: solid rgb(255, 255, 255);
+    border-radius: 3px;
+    background-color: #a8dfff
+}
