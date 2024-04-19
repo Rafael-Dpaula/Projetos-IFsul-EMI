@@ -1,0 +1,116 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cabecalho {
+    height: fill;
+    text-align: center;
+    background-color: cadetblue;
+    font-family: 'Courier';
+    font: bold;
+    align-content: center;
+    margin-top: 0px;
+    padding: 8px;
+    position: relative;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 11%;
+    font-weight: bold;
+    float: left;
+}
+
+.links:hover {
+    transition: 0.8s;
+    text-decoration: underline;
+    transform: scale(1.1);
+    scale: 1.1;
+}
+
+.links:visited {
+    color: black;
+}
+
+.rodape {
+    background-color: cadetblue;
+    height: fill;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-top: 1.6%;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+h1 {
+    font-size: 30px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.insta {
+    color: black;
+    text-decoration: solid transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.insta::after {
+    color: black;
+    text-decoration: solid transparent;
+}
+
+.insta:hover {
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    transform: scale(1.03);
+    scale: 1.03;
+}
+
+h1:hover {
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    transform: scale(1.03);
+    scale: 1.03;
+}
+
+.dev {
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: 2px solid black transparent;
+    height: fill;
+    width: 500px;
+}
+
+.curriculo {
+    text-align: justify;
+    font-family: cursive;
+    margin-left: 10px;
+    margin-right: 10px;
+}

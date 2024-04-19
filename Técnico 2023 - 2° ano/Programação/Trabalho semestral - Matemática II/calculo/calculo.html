@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos Geométricos</title>
+    <link rel="stylesheet" href="calculo.css">
+</head>
+
+<body style="margin: 0px;">
+    <div class="cabecalho"> <!--cabeçalho-->
+        <header>
+            <img src="../images/logo2.png" width="150px" height="150px">
+            <h1 style="margin:0px; padding:3px;margin-top: 0px;">Calculos Geométricos</h1>
+            <a class="links" href="../bibliografia/biblio.html">Bibliografia</a>
+            <a class="links" href="../inicial/pag1.html">Introdução</a>
+            <a class="links" href="../devs/desenvolvedores.html">Desenvolvedores</a>
+            <a class="links" href="../enem/enem.html">Questões</a><br><br>
+        </header>
+    </div>
+    <div class="conteudo">
+        <br>
+        <div id="imagem" style="margin-bottom: 0px; padding: 0px; height: 400px; width: 550px;">
+            <p id="prismatriname" class="nomePrisma" style="display: none; margin-bottom: 0px;">Prima Triângular Reto
+            </p>
+            <p id="prismapenname" class="nomePrisma" style="display: none; margin-bottom: 0px;">Prisma Pentágonal Reto
+            </p>
+            <p id="prismahexname" class="nomePrisma" style="display: none; margin-bottom: 0px;">Prisma Hexagonal Reto
+            </p>
+            <br><br><br>
+            <img src="" id="img" height="320px" width="250px"
+                style=" display: none; margin-top: 0px; margin-bottom: 5px;background-size: cover; overflow: fixed;">
+        </div>
+        <input type="number" style="width: 153px;" class="dados" id="qtd" placeholder="nº de arestas" max="6" min="3">
+        <input type="number" class="dados" id="a" placeholder="Medida da aresta" min="0">
+        <input type="number" class="dados" id="h" placeholder="Medida da altura" min="0">
+        <br><button type="button" class="botao" id="botao">Calcular Prisma</button><br><br><br>
+        <p class="titresult" id="AB">area da base:
+        <p id="mostraAB" style="margin-left: 20px;font-family: cursive;"></p>
+        </p>
+        <p class="titresult" id="AL">area lateral:
+        <p id="mostraAL" style="margin-left: 20px;font-family: cursive;"></p>
+        </p>
+        <p class="titresult" id="AT">area total:
+        <p id="mostraAT" style="margin-left: 20px;  font-family: cursive;"></p>
+        </p>
+        <p class="titresult" id="V">volume total:
+        <p id="mostraV" style="margin-left: 20px; font-family: cursive;"></p>
+    </div>
+
+    <footer class="rodape" id="rodape" style="position:absolute;"><!--rodapé-->
+        <Pa class="rodape">IFSUL - Câmpus Passo Fundo. <br> Estrada perimetral Leste, 150, Passo Fundo - RS. CEP:
+            99064-440 <br> Telefone:(54)3311-2916 <br> Turma - 2 Ano Informática <br>&copy Grupo - MR <br> Trabalho -
+            Prismas Regulares</P>
+    </footer>
+
+    <script src="calculo.js"></script>
+</body>
+
+</html>

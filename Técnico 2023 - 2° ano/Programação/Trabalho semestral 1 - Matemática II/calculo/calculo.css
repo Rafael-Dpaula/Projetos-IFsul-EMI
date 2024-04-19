@@ -1,0 +1,145 @@
+body {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    height: fill;
+    width: fill;
+}
+
+.cabecalho {
+    text-align: center;
+    background-color: cadetblue;
+    height: fill;
+    font-family: 'Courier';
+    font: bold;
+    align-content: center;
+    margin-top: 0px;
+    padding: 8px 8px;
+    position: relative;
+}
+
+.conteudo {
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 19px;
+    font-family: 'Trebuchet MS';
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.rodape {
+    background-color: cadetblue;
+    height: fill;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-top: 1.6%;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 0.1px;
+    padding-top: 0.2px;
+    font-size: 14px;
+}
+
+.dados {
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.titresult {
+    font-size: 24px;
+    display: none;
+}
+
+div[id='imagem'] {
+    border: 2px solid black transparent;
+    margin-right: 100px;
+    margin-top: 10px;
+    height: 320px;
+    width: 100px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    float: right;
+    position: relative;
+}
+
+.nomePrisma {
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: -0px;
+    align-content: center;
+    align-items: center;
+    padding-left: 0px;
+    font: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    top: -3px;
+}
+
+input[type="number"] {
+    margin-right: 2.1%;
+    margin-left: 28px;
+    position: absolute;
+    position: relative;
+    border: 2px solid black !important;
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-weight: bolder;
+    height: 24px;
+    width: fill;
+    float: left;
+    margin-bottom: 12px;
+}
+
+.botao {
+    position: absolute fixed;
+    border-top: 2px solid black;
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+    color: black;
+    height: font-size;
+    width: 49.4%;
+    background-color: white;
+    float: left;
+    margin-left: 1.8%;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.botao:hover {
+    transition: 0.5s;
+    background-color: cadetblue;
+    text-decoration: underline solid black;
+    transform: scale(1.03);
+    scale: 1.03;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 11%;
+    font-weight: bold;
+    float: left;
+}
+
+.links:hover {
+    transition: 0.8s;
+    text-decoration: underline;
+    transform: scale(1.1);
+    scale: 1.1;
+}
+
+.links:visited {
+    color: black;
+}

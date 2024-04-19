@@ -1,0 +1,126 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cabecalho {
+    height: fill;
+    text-align: center;
+    background-color: cadetblue;
+    font-family: 'Courier';
+    font: bold;
+    align-content: center;
+    margin-top: 0px;
+    padding: 8px;
+    position: relative;
+}
+
+p {
+    text-align: left;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-left: 0.3em;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 11%;
+    font-weight: bold;
+    float: left;
+}
+
+.links:hover {
+    transition: 0.8s;
+    text-decoration: underline;
+    transform: scale(1.1);
+    scale: 1.1;
+}
+
+.links:visited {
+    color: black;
+}
+
+.rodape {
+    background-color: cadetblue;
+    height: fill;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-top: 1.6%;
+    align-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+p {
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+    padding-left: 0.3em;
+}
+
+.nome {
+    text-align: center;
+    margin-top: -100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+span {
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-left: 30px;
+    padding-left: 0.3em;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: -90px;
+}
+
+.biblio {
+    border-radius: 10px;
+    border-style: none;
+    background: blue;
+    background: -webkit-linear-gradient(to right, rgb(34, 34, 136), rgba(74, 74, 252, 0.849));
+    background: linear-gradient(to right, rgb(59, 59, 218), rgba(74, 74, 252, 0.849));
+    color: black;
+    font-size: 23px;
+}
