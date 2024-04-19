@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .limparfloat::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .caixa{
+            border: 1px solid black;
+            width: 230px;
+            height: 30px;
+            font-family: cursive;
+            font-weight:bold ;
+            font-size: 16px;
+        }
+        .cabeçalho{
+            width: 1570px;
+            margin-top: 30px;
+            border: 2px solid black;
+        }
+        #linkcadastro{
+            float: right;
+            margin-right:20px ;
+            padding-top: 0.5em;
+            font-size: 1.2em;
+        }
+        #imgCadastro{
+            vertical-align: middle;
+
+        }
+        #logo{
+            float: left;
+            padding-left: 20px;
+        }
+        #busca{
+            width: 273px; height: 1em;
+            margin-top: 15px;
+            margin-left: 20px;
+            padding-top: 1em;
+            vertical-align: middle;
+        }
+        .links{
+            text-decoration: none;
+            color: black;
+        }
+        .links:hover{
+            text-decoration: dashed black solid;
+        }   
+        .links:visited{
+            color: black;
+        }
+        .links:active{
+            color:red; 
+        }
+        .menu{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-top: 1em;
+            width: 1570px;
+            font-family: cursive;
+        }
+        .margemEsquerda{
+            margin-left: 30px;
+        }
+        .menu a{
+            float: left;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .menu a:hover{
+            background-color:aqua;
+        }
+        .cadas{
+            color: black; 
+            float:left;
+        }
+        .cadas:active{
+            color: aqua;
+            text-decoration: underline dashed black;
+        }
+        .titulopagina{
+            border-bottom: 2px solid black;
+            width:  1570px;
+            text-align: center;
+            margin-top: 2em;
+            font-size: 1.5em;
+        }
+        .produto{
+            float: left;
+            width: 200px;
+            text-align: center;
+            font-family: cursive;
+            margin-left: 100px;
+        }
+        .botao{
+            font-size: 1.2em;
+            height:40px;
+            width: 220px;
+            background-color: green;
+            color:black;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: none;
+        }
+        .preco{
+            color:red ;
+            font-weight: bold; 
+        }
+    .botao:hover{
+        cursor: pointer;
+    }
+    .rodape{
+        border-top: 5px solid aqua;
+        left: 0;
+        bottom: 0;
+        width: 1570px;
+        margin-top: 3em;
+        background-color: aquamarine;
+        color: black;
+        font-family: monospace;
+        text-align: center;
+        line-height: 1.3em;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    </style>
+</head>
+<body bgcolor="white">
+    <div class="limparfloat cabeçalho">
+        <img src="Imagens/cadastro.png" id="logo" alt="logo" width="60" height="60">
+        <input class="caixa" type="text" name="busca" id="busca" placeholder="Digite o produto, marca ou modelo">
+        <a href="Cadastro.html" id="linkcadastro" class="links">
+           
+            <img src="Imagens/cadastro.png" id="imgCadastro" alt="Cadastro" height="45" width="45">
+            <p class="cadas">Cadastre-se!</p>
+        </a>
+    </div>
+    <div class="limparfloat menu">
+        <a class="links margemEsquerda" href="utilidades.html"> Utilidades</a>
+        <a class="links margemEsquerda" href="eletro.html">Eletrodomésticos</a>
+        <a class="links margemEsquerda" href="alimentos.html">Alimentícios</a>
+        <a class="links margemEsquerda" href="brinquedos.html">Brinquedos</a>
+
+    </div>
+    <p class="titulopagina">Computadores</p>
+    <div class="limparfloat"> <!-- div geral -->
+        <div class="produto"> <!-- produtos -->
+            <p>Kit Desktop Gamer Predator Orion 5000 PO5-620-BR13 i7 16GB 1TB SSD RTX 3070 + Cadeira Gamer Predator...</p>
+            <img src="Imagens/predator.png" alt="pc1" height="250" width="200">
+            <p class="preco">R$10.999,00</p>
+            <button class="botao">Comprar</button>
+        </div>
+        <div class="produto">
+            <p>Notebook Gamer Dell Alienware m15 R6 Intel Core i7-11800H, GeForce RTX 3070, 16GB RAM, SSD 1TB, 15.6...</p>
+            <img src="Imagens/alienware.webp" alt="pc2" height="250" width="200">
+            <p class="preco">R$11.999,99 </p>
+            <button class="botao">Comprar</button>
+        </div>
+        <div class="produto">
+            <p>PC ITX Gamer FPS Powered By Asus / Core I7 10700KA / RTX 3070 TI OC 8GB / 16GB RAM / SSD M.2 500GB...    </p>
+            <img src="Imagens/Itx Gamer fps.webp" alt="pc3" height="250" width="200">
+            <p class="preco">R$21.250,00</p>
+            <button class="botao">Comprar</button>
+        </div>
+        <div class="produto">
+            <p>Pc Gamer Completo Amd 6-core Cpu 3.8ghz 8gb (placa De Vídeo Radeon R5 2Gb) Ssd 120gb Kit Gamer...</p>
+            <img src="Imagens/pc amd.webp" alt="pc3" height="250" width="200">
+            <p class="preco">R$2.151,00</p>
+            <button class="botao">Comprar</button>
+        </div>
+        <div class="produto">
+            <p>Notebook Gamer Acer Nitro 5 Intel Core I5 8gb - 256GB Ssd Nvidia Geforce Gtx 1650 4gb Windows 11...</p>
+            <img src="Imagens/nitro 5.webp" alt="pc3" height="250" width="200">
+            <p class="preco">R$5.599,00</p>
+            <button class="botao">Comprar</button>
+        </div>
+    </div> <!--fecha a div geral-->
+    <div class="rodape">
+        <p>Amazon Serviços de Varejo do Brasil Ltda. | CNPJ 15.436.940/0001-03 <br><br>
+            Av. Juscelino Kubitschek, 2041, Torre E, 18° andar - São Paulo CEP: 04543-011| Fale conosco| ajuda-amazon@amazon.com.br <br><br>
+            Formas de pagamento aceitas: cartões de crédito (Visa, MasterCard, Elo e American Express), cartões de débito (Visa e Elo), Boleto e Pix.</p>
+    </div>
+</body>
+</html>

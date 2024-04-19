@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .limparfloat::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .caixa{
+            border: 1px solid black;
+            width: 230px;
+            height: 30px;
+            font-family: cursive;
+            font-weight:bold ;
+        }
+        .cabeçalho{
+            width: 500px;
+            margin-top: 1em;
+            border: 2px solid black;
+        }
+        #linkcadastro{
+            float: right;
+            margin-right:20px ;
+            padding-top: 0.5em;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body bgcolor="lightgray">
+    <div class="limparfloat cabeçalho">
+        <img src="carrinho.jpg" alt="logo" width="60" height="60">
+        <input class="caixa" type="text" name="busca" id="busca" placeholder="Digite o produto, marca ou modelo">
+        <a href="Cadastro.html" id="linkcadastro">
+            <img src="cadastro.png" alt="Cadastro" height="50" width="50">
+        </a>
+    </div>
+</body>
+</html>

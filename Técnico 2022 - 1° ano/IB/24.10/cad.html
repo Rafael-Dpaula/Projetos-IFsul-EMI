@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Cabeçalho Menu Completo</title>
+    <meta charset="UTF-8">
+    <style>
+        .limparfloat::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .cabecalho{
+            width: 1550px;
+            margin-top: 1em;
+        }
+        #logo{
+            float: left;
+            padding-left: 20px;
+        }
+
+        #busca{
+            width: 300px;
+            height: 2em;
+            margin-left: 20px;
+            margin-top: 1em;
+            border: 1px solid lightgray;
+            float: left;
+        }
+
+        #linkCadastro{
+            float: right;
+            margin-right: 20px;
+            padding-top: 0.5em;    
+            font-size: 1.2em;
+        }
+
+        #imgCadastro{
+            vertical-align: middle;           
+        }
+
+
+
+        .links{
+            text-decoration: none;
+        }
+
+        .links:link,.links:hover, .links:visited, .links:active{
+            color: black;
+        }
+        .links:hover{
+            text-decoration: underline;
+        }
+        
+
+
+        .menu{
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            width: 1550px;
+            margin-left: 20px;
+            margin-top: 1em;
+        }
+
+        .menu a{
+            float: left;
+            text-align: center;
+            padding: 10px;
+            font-size: 17px;
+        }
+        .menu a:hover{
+            background-color: lightgray;
+        }
+        
+        .tituloPagina{
+            border-bottom: 2px solid aqua;
+            width: 1550px;
+            margin-left: 20px;
+            margin-top: 2em;
+            font-size: 1.5em;
+        }
+        .rodape{
+            left: 0;
+            bottom: 0;
+            width: 1550px;
+            margin-top: 3em;
+            margin-left: 20px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 2em;
+        }
+        .form{
+            margin-left: 20px;
+        }
+        .nome{
+            width: 250px;
+            height: 23px;
+        }
+        .idade{
+            width: 125px;
+            height: 23px;
+        }
+        .data{
+            width: 125px;
+            height: 23px;
+        }
+        .opiniao{
+            width: 250px;
+            height: auto;
+        }
+        .sub{
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cabecalho limparfloat">
+        <a href="inicial.html"><img id="logo" src="carrinho.jpg" alt="logo" width="60" height="60"></a>
+        <input type="text" name="busca" id="busca" placeholder="Digite o produto, marca ou modelo">
+        
+        <a id="linkCadastro" class="links" href="cadastro.html"> 
+            <img id="imgCadastro" src="cadastro.png" alt="cadastro" width="40" height="40">
+             Cadastre-se!
+        </a>
+    </div>
+
+
+    <div class="menu limparfloat">    
+        <a  class="links" href="pascoa.html"> Pascoa</a>
+        <a  class="links margemEsqueda" href="tvs.html"> TVs</a>
+        <a  class="links margemEsqueda" href="eletro.html"> Eletrodomésticos</a>
+        <a  class="links margemEsqueda" href="mercado.html"> Mercado</a>
+    </div>
+
+    <p class="tituloPagina">---Cadastro---</p>
+    <form method="get" action="#" class="form">
+        Nome: <input class="nome" type="text" name="nome" placeholder="Digite seu nome:"><br><br>
+        Idade: <input class="idade" type="number" nome="idade" placeholder="Digite sua idade"><br><br>
+        Data: <input class="data" type="date" name="dtCad"><br><br>
+        Opiniao: <br>
+         <textarea name="opinião" ></textarea><br><br>
+         <input class="sub links" type="submit" value="Cadastrar" ><br><br>
+    </form>
+
+    <div class="rodape">
+        <p>
+            E-Compras Comércio Eletrônico S.A. / www.ecompras.com.br / Rua XXX, Nº 100 – 10007º andar / Passo Fundo - RS - CEP. : 00000-000 / CNPJ: 00.000.000/0000-00 / Inscrição Estadual: 000.000.000.000 / Telefone: (54) 0000-0000 
+        </p>
+    </div>
+
+
+</body>
+
+
+
+</html>

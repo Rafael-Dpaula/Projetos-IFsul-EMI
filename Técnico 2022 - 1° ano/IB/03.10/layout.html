@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        .limparfloat::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .caixa{
+            border: 1px solid black;
+            width: 230px;
+            height: 30px;
+            font-family: cursive;
+            font-weight:bold ;
+            font-size: 16px;
+        }
+        .cabeçalho{
+            width: 1580px;
+            margin-top: 30px;
+            border: 2px solid black;
+        }
+        #linkcadastro{
+            float: right;
+            margin-right:20px ;
+            padding-top: 0.5em;
+            font-size: 1.2em;
+        }
+        #imgCadastro{
+            vertical-align: middle;
+
+        }
+        #logo{
+            float: left;
+            padding-left: 20px;
+        }
+        #busca{
+            width: 273px; height: 1em;
+            margin-top: 15px;
+            margin-left: 20px;
+            padding-top: 1em;
+            vertical-align: middle;
+        }
+        .links{
+            text-decoration: none;
+            color: black;
+        }
+        .links:hover{
+            text-decoration: dashed;
+        }
+        .links:visited{
+            color: black;
+        }
+        .links:active{
+            color:darkgoldenrod; 
+        }
+        .menu{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-top: 1em;
+            width: 1580px;
+            font-family: cursive;
+        }
+        .margemEsquerda{
+            margin-left: 30px;
+        }
+        .menu a{
+            float: left;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .menu a:hover{
+            background-color:goldenrod;
+        }
+    </style>
+</head>
+<body bgcolor="white">
+    <div class="limparfloat cabeçalho">
+        <img src="carrinho.jpg" id="logo" alt="logo" width="60" height="60">
+        <input class="caixa" type="text" name="busca" id="busca" placeholder="Digite o produto, marca ou modelo">
+        <a href="Cadastro.html" id="linkcadastro" class="links">
+            Cadastre-se!
+            <img src="cadastro.png" id="imgCadastro" alt="Cadastro" height="45" width="45">
+           
+        </a>
+    </div>
+    <div class="limparfloat menu">
+        <a class="links margemEsquerda" href="utilidades.html"> Utilidades</a>
+        <a class="links margemEsquerda" href="eletro.html">Eletrodomésticos</a>
+        <a class="links margemEsquerda" href="alimentos.html">Alimentícios</a>
+        <a class="links margemEsquerda" href="brinquedos.html">Brinquedos</a>
+
+    </div>
+</body>
+</html>

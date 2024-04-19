@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades</title>
+    <style>
+        .caixa{
+            border: 1px solid brown;
+            width: 1570px;
+            height: 400px;
+            margin-bottom: 1em;
+        }
+        .limparfloat::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .imgesquerda{
+            float: left;
+        }
+        .imgdireita{
+            float: right;
+        }
+        h2{
+            text-align: center;
+            background-color: darkgoldenrod;
+            font-family: cursive;
+        }
+        .texto{
+            padding-top: 2em;
+            max-width: 600px; /*tamanho maximo de 600 pixels de largura*/
+            text-align: justify;
+            float: left;
+        }
+    </style>
+</head>
+<body bgcolor="lightgray">
+    <div class="limparfloat caixa">
+    <h2>Laranjas</h2>
+    <img class="imgesquerda" src="laranja.jpg" alt="laranja" width="170" height="170">
+    <img class="imgdireita" src="laranja.jpg" alt="laranja" width="170" height="170">
+    </div>
+    <div class="limparfloat caixa">
+        <h2>Laranjas</h2>
+        <img class="imgesquerda" src="laranja.jpg" alt="laranja" width="170" height="170">
+        <p class="texto">Ajuda no funcionamento do sistema digestivo. Afruta é rica em fibras como pectina, celulose e hemicelulose, que facilitam a digestão e ajudam o intestino a funcionar melhor. ...Protege contra doenças cardiovasculares. ...Fortalece o sistema imunológico. ...Retarda o envelhecimento.</p>
+        <img class="imgdireita" src="laranja.jpg" alt="laranja" width="170" height="170">
+        </div>
+        <div class="limparfloat caixa">
+            <h2>Laranjas</h2>
+            <img class="imgesquerda" src="laranja.jpg" alt="laranja" width="170" height="170">
+            <p class="texto">Ajuda no funcionamento do sistema digestivo. Afruta é rica em fibras como pectina, celulose e hemicelulose, que facilitam a digestão e ajudam o intestino a funcionar melhor. ...Protege contra doenças cardiovasculares. ...Fortalece o sistema imunológico. ...Retarda o envelhecimento.</p>
+            <img class="imgdireita" src="laranja.jpg" alt="laranja" width="170" height="170">
+        </div>
+</body>
+</html>
