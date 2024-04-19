@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo caixas de seleção</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            background: rgb(204, 226, 239);
+            display: none;
+        }
+
+        /**comentário**/
+    </style>
+</head>
+
+<body>
+    <select id="lista1" multiple>
+        <option value="1">Azul</option>
+        <option value="2">Amarelo</option>
+        <option value="3">Verde</option>
+        <option value="4">Rosa</option>
+    </select>
+    <label>Lista 2</label>
+    <select id="lista2" multiple>
+    </select>
+    <input type="button" id="botao" value="testar">
+    <br>
+    <label>Selecione a imagem:</label>
+    <input type="file" id="imagem"  name="imagem">
+    <br>
+    <!-- comentário -->
+    <div id="card" class="card">
+        <img id="imagem_card" name="imagem_card" >
+        <div id="resultado">teste <br> aula.... </div>
+    </div>
+
+    <select id="lista3">
+        <option value="1">Azul</option>
+        <option value="2">Amarelo</option>
+        <option value="3">Verde</option>
+        <option value="4">Rosa</option>
+    </select>
+    <script src="lista.js"></script>
+</body>
+
+</html>
