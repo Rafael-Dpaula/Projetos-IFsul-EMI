@@ -1,0 +1,43 @@
+-- SABADO LETIVO 06/07
+
+-- 1) Criar novos registros nas tabelas tb_jogador (1 registro),
+tb_endereco (1 registro), tb_patente (2 registro), tb_artefato (2 registro),
+tb_arma (1 registro), tb_jogador_artefato (2 registro) e tb_jogador_conquista_patente (2).
+Utilizem informações pessois para o nome e endereço.
+
+insert into tb_jogador(nickname, senha, quantpontos, quantdinheiro, datacadastro, data_ultimo_login, situacao) values
+('Rafael', '2602', 5500, 2300, '2022-03-15', '2023-06-10', 'I')
+
+insert into tb_endereco(complemento, cep , nicknamejogador) values
+('aaa', '99060330', 'Rafael')
+
+insert into tb_patente(nome, quant_min_pontos, datacriacao, cor) values
+('Ouro 3', 7000, '2012-01-01', 'Dourado'), ('Prata Elite', 3200, '2012-01-01', 'Prata')
+
+insert into tb_artefato(tipo, nome, valor, datacriacao) values
+('A', 'Revolver R8', 800, '2012-01-01'), ('A', 'Glock', 200, '2012-01-01')
+
+insert into tb_arma(codartefato, nivel_dano, velocidade_recarga, quant_max_compra)values
+(3, 22, 2.1, 1)
+
+insert into tb_jogador_artefato(codartefato, nicknamejogador, quantidade)values
+(3, 'rdp', 1), (4, 'Rafael', 3)
+
+insert into tb_jogador_conquista_patente(nickname, codpatente)values
+('Rafael', 3), ('rdp', 4)
+
+-- 2) Criar um comando de seleção para mostrar as seguintes informações: nickname,
+--data de cadastro (formato DD-MM-YYYY. utilize a função to_char do PostgreSQL),
+-- cep, complemento. Esta seleção deverá retornar apenas os dados do jogar criado na questão 1.
+-- Portanto, utilize a clausula where para filtrar pela chave primária.
+
+
+select nickname, to_char(datacadastro, 'DD-MM-YYYY'), cep, complemento from tb_jogador, tb_endereco where upper(nickname) = upper('rafael') and nicknamejogador = nickname
+
+
+--3) Desenvolver um comando de seleção para retornar o código, cor, data_criação 
+--(formato DD-MM-YYYY. utilize a função to_char do PostgreSQL), logotipo e quantidade_min_pontos 
+--das patentes vinculadas ao jogador criado na questão 1. Portanto, é necessário relacionar no
+--comando select as tabelas tb_jogador, tb_patente e tb_jogador_conquista_patente.
+
+select cor, to_char(datacriacao, 'DD-MM-YYYY'), logotipo, quant_min_pontos from tb_jogador, tb_patente, tb_jogador_conquista_patente where tb_jogador.nickname = tb_jogador_conquista_patente.nickname and upper(tb_jogador.nickname) = upper('rafael')

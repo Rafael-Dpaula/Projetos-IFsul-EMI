@@ -1,0 +1,104 @@
+--Atividade Assincrona
+insert into tb_modo(nome, datacriacao, quantboots, quantrounds)
+values(‘mata-mata’, 2024-07-02’, 1, 3),
+(‘competitivo’, 2024-07-02’, 2, 13)
+
+insert into tb_mapa(nome, datacadastromapa, status)
+values(‘mirage’, ‘2024-07-02’, ‘A’),
+(‘dust 2’, 2024-05-02, ‘I’)
+
+insert into tb_local(nome, statuslocal)
+values('L', false), (caixa de fogo’, true)
+
+insert into tb_mapa_locais(codmapa, codlocal)
+values(1,2),(2,1)
+
+insert into tb_patente(nome,quant_min_pontos,datacriacao,cor)
+values('prata 2', 1300, '2012-01-01', 'prata'), 
+('global elite', 22000, '2012-01-01', 'dourado e azul')
+
+insert into tb_jogador(nickname,senha,quantpontos,quantdinheiro,datacadastro,situacao)
+values ('rdp', '222333', 4000, 2000, default, 'A'),
+('jdt', '222333', 16000, 6000, default, 'I')
+
+insert into tb_endereco(nicknamejogador)
+values('rdp'), ('jdt')
+
+insert into tb_tipomunicao(nome, datacriacao)
+values('pistola', '2012-01-01'),
+('sniper', '2012-01-01')
+
+insert into tb_artefato(tipo,nome,valor,datacriacao)
+values('A', 'AWP', 4750, default),
+('M', 'traçante', 350, default)
+
+insert into tb_arma(codartefato, nivel_dano, velocidade_recarga, quant_max_compra)
+values(1, 495, 2.5, 1),
+(2, 26, 1, 1)
+
+insert into tb_municao(codartefato, cod_tipomunicao, quant_max_compra, calibre)
+values(1, 2, 20, 7.62),
+(2, 1, 50, 9)
+
+insert into tb_compra(nickname, data)
+values('rdp', '2024-07-02'),
+('jdt', '2024-07-01')
+
+insert into tb_compra_arma(codartefato, codcompra, quantidade)
+values(1, 1, 1),
+(2,2, 30)
+
+insert into tb_compra_municao(codartefato, codcompra, quantidade)
+values(1,1,1),
+(2,2,30)
+
+insert into tb_jogador_artefato(codartefato, nicknamejogador, quantidade)
+values(1, 'rdp', 1),
+(2, 'jdt', 30)
+
+insert into tb_timedisputa(nometime, nicknamejogador, situacao)
+values('contraterrorista', 'rdp', false),
+('terrorista', 'jdt', true)
+
+insert into tb_partida(codmapa, codtimedisputa, datainicio, resultado)
+values(1, 2, '2024-07-02', true),
+(2, 1, '2024-07-01', false)
+
+insert into tb_round(numero, codpartida, datainicio, resultado, quantresgates, quantmortes)
+values(16, 1, '2024-07-02', true, 16, 14),
+(25, 2, '2024-07-01', false, 25, 20)
+
+insert into tb_jogador_conquista_patente(codpatente, nickname) values
+(1, 'rdp'), (2, 'jdt');
+
+-- 2 -   alterar a data de criação para '01/01/2020' para o primeiro registro na tabela tb_modo update tb_modo set datacriacao = '2020-01-01' where codigo = 1;
+
+-- 3 -   remover o último registro da tabela tb_modo
+delete from tb_modo where datacriacao = (select datacriacao from tb_modo order by datacriacao offset 1 limit 1)
+
+-- 4 -   Selecionar todos os jogadores (nickname, senha, situacao) com os seus respectivos endereços.
+select nickname, senha, situacao from tb_jogador
+
+-- 5 -   Selecionar os jogadores (nickname, senha, situacao) com as suas respectivas patentes.
+select j.nickname, j.senha, j.situacao, p.nome from tb_jogador as j, tb_patente as p, tb_jogador_conquista_patente as c where j.nickname = c.nickname and p.codigo = c.codpatente
+
+-- 6 -   Remover todas a patentes do segundo jogador cadastrado.
+delete from tb_jogador_conquista_patente where nickname = (select nickname from tb_jogador order by datacadastro offset 1 limit 1)
+
+-- 7 -   Selecionar todos os jogadores (nickname, senha, situacao) com as suas respectivas patentes. (usar leftjoin)
+select j.nickname, j.senha, j.situacao, p.nome from tb_jogador as j left join tb_jogador_conquista_patente as c on j.nickname = c.nickname left join  tb_patente as p on p.codigo = c.codpatente
+
+-- 8 -   Selecionar as partidas e os respectivos rounds. 
+select * from tb_partida, tb_round where tb_partida.codigo = tb_round.codpartida
+
+-- 9 -   Selecionar todas as partidas e os respectivos rounds. (usar o leftjoin)
+select * from tb_partida left join tb_round on tb_partida.codigo = tb_round.codpartida
+
+-- 10 - Selecionar todos os artefatos do tipo arma
+select * from tb_artefato where upper(tipo) = upper( 'A')
+
+-- 11 - Selecionar todos os artefatos do tipo munição.
+select * from tb_artefato where upper(tipo) = upper('M')
+
+-- 12-  Selecionar todos os artefatos do primeiro jogador cadastrado.
+select tb_jogador.nickname, tb_artefato.* from tb_artefato, tb_jogador, tb_jogador_artefato, (select nickname from tb_jogador order by datacadastro limit 1) as pj where tb_jogador.nickname = tb_jogador_artefato.nicknamejogador and tb_artefato.codigo = tb_jogador_artefato.codartefato and pj.nickname = tb_jogador.nickname

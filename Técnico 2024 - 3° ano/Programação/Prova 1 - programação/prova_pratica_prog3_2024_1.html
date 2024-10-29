@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Prova Prática - EMI - Programação III - 2024 - 1</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <h2 style="text-align: center;background-color: aqua;">Prova prática: HTML, CSS, Vue, Validação e LocalStorage
+        </h2>
+        <div class="row">
+            <div class="col-xs-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                    <li><a data-toggle="pill" href="#menu1">Endereço</a></li>
+                    <li><a data-toggle="pill" href="#menu2">Jogador</a></li>
+                    <li><a data-toggle="pill" href="#menu3">Modo</a></li>
+                    <li><a data-toggle="pill" href="#menu4">Compra</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-9">
+                <div class="tab-content" id="app">
+
+                    <div id="menu4" class="tab-pane fade">
+                        <h3>Compra</h3>
+                        <p>CRUD para Compra [codigo, data, valor_total, jogador e observacoes] </p>
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Jogador</th>
+                                <th scope="col">Observações</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tbody>
+                                <tr v-for="(c, indice) in compras" v-if="c" :key="c.id">
+                                    <td>{{c.id}}</td>
+                                    <td>{{c.data | formataData}}</td>
+                                    <td>{{c.total}}</td>
+                                    <td>{{c.jogador.nickname}}</td>
+                                    <td>{{c.observacoes}}</td>
+                                    <td><button v-on:click="editCompra(indice)" class="btn"
+                                            type="button">Alterar</button></td>
+                                    <td><button v-on:click="remCompra(indice)" class="btn"
+                                            type="button">Remover</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="formCompra" class="form-group">
+                            <h3>Formulário para gerenciar Compra</h3>
+                            <ul>
+                                <li v-for="error in errosC">{{ error }}</li>
+                            </ul>
+                            <div>
+                                <label for="inputCd">#:</label>
+                                <input type="text" class="form-control" v-model="nova_compra.id" id="inputCd" disabled>
+                            </div>
+
+                            <div>
+                                <label for="inputDt">Data:</label>
+                                <input type="date" class="form-control" id="inputDt" v-model="nova_compra.data">
+                            </div>
+
+                            <div>
+                                <label for="inputValorTotal">Total:</label>
+                                <input type="number" class="form-control" v-model="nova_compra.total"
+                                    id="inputValorTotal">
+                            </div>
+
+                            <div>
+                                <label for="select_jogador">Jogador:</label>
+                                <select v-model="nova_compra.jogador" class="form-control" id="select_jogador">
+                                    <option disabled value="">Escolha um item</option>
+                                    <option v-for="j in jogadores" v-bind:value="j">
+                                        {{ j.nickname }}
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="inputObservacao">observações:</label>
+                                <input type="text" id="inputObservacao" class="form-control" v-model="nova_compra.observacoes">
+                            </div>
+                            <br><br>
+
+                            <button @click="addCompra" class="btn btn-primary" type="button">Salvar</button>
+                            <button @click="cleanFormularioCompra" class="btn btn-primary" type="button">Limpar</button>
+
+                        </div>
+                    </div>
+
+                    <div id="menu3" class="tab-pane fade">
+                        <h3>Modo</h3>
+                        <p>CRUD para Modo... </p>
+                    </div>
+
+                    <div id="home" class="tab-pane fade in active">
+                        <h3>HOME</h3>
+                        <p>Em breve autenticação de Jogador... </p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+
+                        <h2>Listagem de Endereços</h2>
+
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">CEP</th>
+                                <th scope="col">Alterar</th>
+                                <th scope="col">Remover</th>
+                            </tr>
+                            <tbody>
+                                <tr v-for="(e, indice) in enderecos">
+                                    <td>{{e.id}}</td>
+                                    <td>{{e.cep}}</td>
+                                    <td><button v-on:click="editEndereco(indice)" class="btn"
+                                            type="button">Alterar</button></td>
+                                    <td><button v-on:click="remEndereco(indice)" class="btn"
+                                            type="button">Remover</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div id="formularioEndereco">
+                            <h3>Formulário para gerenciar Endereço</h3>
+                            <div>
+                                <div class="form-group">
+                                    <label for="inputId">#:</label>
+                                    <input type="text" v-model="novo_endereco.id" class="form-control" id="inputId"
+                                        disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputCEP">CEP:</label>
+                                    <input type="text" v-model="novo_endereco.cep" class="form-control" id="inputCEP">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputComplemento">Complemento:</label>
+                                    <input type="text" v-model="novo_endereco.complemento" class="form-control"
+                                        id="inputComplemento"><!--Atividade 2 - Aplicar um input/calendario mais apropriado. -->
+                                </div>
+
+                                <button @click="addEndereco" class="btn btn-primary" type="button">Salvar</button>
+                                <button @click="cleanFormularioEndereco" class="btn btn-primary"
+                                    type="button">Limpar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+
+                        <h2>Listagem de Jogadores</h2>
+
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">NickName</th>
+                                <th scope="col">Data Nascimento</th>
+                                <th scope="col">Quantidade de Estrelas</th>
+                                <th scope="col">Endereco</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Alterar</th>
+                                <th scope="col">Remover</th>
+                            </tr>
+                            <tbody>
+                                <tr v-for="(j, indice) in jogadores">
+                                    <td>{{j.nickname}}</td>
+                                    <td>{{j.data_nascimento | formataData}}</td>
+                                    <td>{{j.qtd_estrela}}</td>
+                                    <td>{{j.endereco.cep}}</td>
+                                    <td v-if="j.status"><input type="checkbox" checked disabled></td>
+                                    <td v-if="!j.status"><input type="checkbox" disabled></td>
+                                    <td><button v-on:click="editJogador(indice)" class="btn"
+                                            type="button">Alterar</button></td>
+                                    <td><button v-on:click="remJogador(indice)" class="btn"
+                                            type="button">Remover</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="formularioJogador">
+                            <h3>Formulário para gerenciador Jogador</h3>
+
+                            <div class="form-group">
+                                <label for="inputNickname">Nickname:</label>
+                                <input type="text" v-model="novo_jogador.nickname" class="form-control"
+                                    id="inputNickname">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputDtNasc">D. Nascimento:</label>
+                                <input type="date" v-model="novo_jogador.data_nascimento" class="form-control"
+                                    id="inputDtNasc"><!--Atividade 2 - Aplicar um input/calendario mais apropriado. -->
+                            </div>
+                            <div class="form-group">
+                                <label for="inputQtdEstrela">Quantidade de Estrelas:</label>
+                                <input type="number" v-model="novo_jogador.qtd_estrela" class="form-control"
+                                    id="inputQtdEstrela">
+                            </div>
+                            <!-- https://br.vuejs.org/v2/guide/forms.html -->
+                            <div class="form-group">
+                                <label for="selectEndereco"><a
+                                        href="Vue_crud_select_localstorage_endereco.html">Endereço:</a></label>
+                                <select v-model="novo_jogador.endereco" class="form-control" id="selectEndereco">
+                                    <option disabled value="">Escolha um item</option>
+                                    <option v-for="e in enderecos" v-bind:value="e">
+                                        {{ e.cep }}
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="checkStatus">Status:</label>
+                                <input type="checkbox" v-model="novo_jogador.status"
+                                    id="checkStatus"><!--Atividade 1 - Aplicar um input mais apropriado. -->
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSenha">Senha:</label>
+                                <input type="password" v-model="novo_jogador.senha" class="form-control"
+                                    id="inputSenha"><!--Atividade 3 - Aplicar um input mais apropriado. -->
+                            </div>
+
+                            <button @click="addJogador" class="btn btn-primary" type="button">Salvar</button>
+                            <button @click="cleanFormularioJogador" class="btn btn-primary"
+                                type="button">Limpar</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <div>
+        <p style="text-align: center;background-color: aqua;">EMI - Programação III - 2024 - 1</p>
+    </div>
+</footer>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        errosC = [];
+
+        var jogadores = [];
+        //testa se existe o item jogadores no localStorage do navegador.
+        if (localStorage.getItem("jogadores") == null) {
+
+            //caso não exista cria o item jogadores.
+            localStorage.setItem("jogadores", JSON.stringify([]));
+
+        } else {
+            //se existir, realiza o parse e armazena na variável jogadores.
+            jogadores = JSON.parse(localStorage.getItem("jogadores"))
+        }
+
+        var enderecos = [];
+        //testa se existe o item enderecos no localStorage do navegador.
+        if (localStorage.getItem("enderecos") == null) {
+
+            //caso não exista cria o item enderecos.
+            localStorage.setItem("enderecos", JSON.stringify([]));
+
+        } else {
+            //se existir, realiza o parse e armazena na variável enderecos.
+            enderecos = JSON.parse(localStorage.getItem("enderecos"));
+        }
+
+        var compras = [];
+        if (localStorage.getItem("compras") == null) {
+            localStorage.setItem("compras", JSON.stringify([]));
+        } else {
+            compras = JSON.parse(localStorage.getItem("compras"));
+        }
+
+        var dados = {
+            "jogadores": jogadores,
+            "novo_jogador": { indice: '', nickname: '', data_nascimento: '', qtd_estrela: '', status: true, senha: '', endereco: {} },
+            "enderecos": enderecos,
+            "novo_endereco": { indice: '', id: '', cep: '', complemento: '' },
+            "nova_compra": { id: '', data: '', total: 0, observacoes: '', jogador: {}},
+            "compras": compras,
+
+            "errosC": errosC,
+        };
+
+        Vue.filter('formataData', function (value) {
+            //yyyy-mm-dd
+            var data = new Date(value);
+            data.setDate(data.getDate() + 1); //incrementa a data em um dia para mostrar corretamente (pode nao ser necessário)              
+            dia = (data.getDate()).toString().padStart(2, '0'),
+                mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.                
+                ano = data.getFullYear();
+            return dia + "/" + mes + "/" + ano;
+        })
+
+        new Vue({
+            el: '#app',
+            data: dados,
+            methods: {
+
+                checkFormC: function () {
+                    var data_atual = new Date();
+                    var data_form = new Date(this.nova_compra.data);
+                    var data_correta = false;
+                    if (data_atual > data_form) {
+                        data_correta = true;
+                    } else {
+                        data_correta = false;
+                    }
+
+                    this.errosC = [];
+
+                    if (data_correta == false) {
+                        this.errosC.push('Data da compra não pode ser anterior a data atual.');
+                    };
+                    console.log('passou1')
+
+                    if (this.nova_compra.total < 0 && this.nova_compra.total > 1000000.01) {
+                        this.errosC.push('Valor do total da compra não pode ser negativo ou maior que R$1000000,01.');
+                    };
+                    console.log('passou2')
+
+                    if (!isNaN(parseInt(this.nova_compra.jogador.indice))) {
+                        this.errosC.push('Insira um jogador.');
+                    };
+                    console.log('passou3')
+
+                    if (this.nova_compra.observacoes.length > 10) {
+                        this.errosC.push('Observações não podem ter mais de 10 caracteres.');
+                    };
+                    console.log('passou4')
+
+                    if (this.nova_compra.total > 0 && isNaN(parseInt(this.nova_compra.jogador.indice)) && data_correta == true && this.nova_compra.total <= 1000000 && this.nova_compra.observacoes.length <= 10) {
+                        console.clear()
+                        console.log('passou5')
+                        return true;
+                    };
+
+                    //  {fim do teste geral 
+                },
+
+                addEndereco: function () {
+                    var input_id = this.novo_endereco.id;
+                    var input_cep = this.novo_endereco.cep.trim();
+                    var input_complemento = this.novo_endereco.complemento.trim();
+
+                    if (input_cep.length == 8) {
+
+                        //documentação sobre o parseInt
+                        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+                        if (isNaN(parseInt(this.novo_endereco.indice))) {
+                            var proximo_id;
+                            if (this.enderecos.length == 0) {
+                                proximo_id = 1;
+                            } else {
+                                proximo_id = (parseInt(this.enderecos[this.enderecos.length - 1].id) + 1)
+                            }
+                            this.enderecos.push({
+                                id: proximo_id,
+                                cep: input_cep,
+                                complemento: input_complemento
+                            }
+                            );
+
+
+                            alert('Novo Endereco cadastrado !');
+
+                        } else {
+
+
+                            this.enderecos[this.novo_endereco.indice] = {
+                                id: input_id,
+                                cep: input_cep,
+                                complemento: input_complemento
+                            };
+                            alert('Endereço alterado !');
+
+
+                        }
+                        localStorage.setItem("enderecos", JSON.stringify(this.enderecos));
+
+                        this.cleanFormularioEndereco();
+
+                    } else {
+
+                        alert("Preencha CEP !!!");
+                    }
+                },
+
+                editEndereco: function (param_index) {
+                    this.novo_endereco.indice = param_index;
+                    this.novo_endereco.id = this.enderecos[param_index].id;
+                    this.novo_endereco.cep = this.enderecos[param_index].cep;
+                    this.novo_endereco.complemento = this.enderecos[param_index].complemento;
+                },
+
+                remEndereco: function (param_index) {
+                    //documentacao sobre o splice
+                    //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+                    //remove 1 elemento do índice definido pela variavel param_index
+                    this.enderecos.splice(param_index, 1);
+
+                    localStorage.setItem("enderecos", JSON.stringify(this.enderecos));
+
+                    alert('Removeu o Endereco: ' + param_index);
+                },
+
+                cleanFormularioEndereco: function () {
+
+                    this.novo_endereco.indice = '';
+                    this.novo_endereco.id = '';
+                    this.novo_endereco.cep = '';
+                    this.novo_endereco.complemento = '';
+                },
+
+                addJogador: function () {
+
+                    var input_indice = this.novo_jogador.indice;
+                    var input_nickname = this.novo_jogador.nickname.trim();
+                    var input_data_nascimento = this.novo_jogador.data_nascimento.trim();
+                    var input_qtd_estrela = this.novo_jogador.qtd_estrela;
+                    var input_senha = this.novo_jogador.senha.trim();
+                    var input_status = this.novo_jogador.status;
+                    var select_endereco = this.novo_jogador.endereco;
+
+                    if (input_nickname && input_qtd_estrela > -1 && input_senha && select_endereco) {
+
+                        //documentação sobre o parseInt
+                        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+                        if (isNaN(parseInt(input_indice))) {
+
+
+                            this.jogadores.push({
+                                indice: input_indice,
+                                nickname: input_nickname,
+                                data_nascimento: input_data_nascimento,
+                                qtd_estrela: input_qtd_estrela,
+                                status: input_status,
+                                senha: input_senha,
+                                endereco: select_endereco
+                            }
+                            );
+
+
+                            alert('Novo Jogador cadastrado !');
+
+                        } else {
+
+                            this.jogadores[input_indice] = {
+                                nickname: input_nickname,
+                                data_nascimento: input_data_nascimento,
+                                qtd_estrela: input_qtd_estrela,
+                                status: input_status,
+                                senha: input_senha,
+                                endereco: select_endereco
+                            };
+
+                            alert('Jogador alterado !');
+                        }
+                        localStorage.setItem("jogadores", JSON.stringify(this.jogadores));
+                        this.cleanFormularioJogador();
+
+                    } else {
+
+                        alert("Preencha nickname, estrelas e senha !!!");
+                    }
+                },
+
+                editJogador: function (param_index) {
+
+                    this.novo_jogador.indice = param_index;
+                    this.novo_jogador.id = this.jogadores[param_index].id;
+                    this.novo_jogador.nickname = this.jogadores[param_index].nickname;
+                    this.novo_jogador.data_nascimento = this.jogadores[param_index].data_nascimento;
+                    this.novo_jogador.qtd_estrela = this.jogadores[param_index].qtd_estrela;
+                    this.novo_jogador.senha = this.jogadores[param_index].senha;
+                    this.novo_jogador.endereco = this.jogadores[param_index].endereco;
+                },
+
+                remJogador: function (param_index) {
+
+                    //documentacao sobre o splice
+                    //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+                    //remove 1 elemento do índice definido pela variavel param_index
+                    this.jogadores.splice(param_index, 1);
+
+                    localStorage.setItem("jogadores", JSON.stringify(this.jogadores));
+
+                    alert('Removeu o jogador: ' + param_index);
+                },
+
+                cleanFormularioJogador: function () {
+
+                    this.novo_jogador.indice = '';
+                    this.novo_jogador.id = '';
+                    this.novo_jogador.nickname = '';
+                    this.novo_jogador.data_nascimento = '';
+                    this.novo_jogador.qtd_estrela = 0;
+                    this.novo_jogador.senha = '';
+                    this.novo_jogador.status = true;
+                    this.novo_jogador.endereco = '';
+                },
+
+
+                addCompra: function () {
+                    if (this.checkFormC()) {
+                        var inputCd = this.nova_compra.id;
+                        var inputIndice = this.nova_compra.indice
+                        var inputData = this.nova_compra.data;
+                        var inputTotal = this.nova_compra.total;
+                        var selectJogador = this.nova_compra.jogador;
+                        var inputObservacoes = this.nova_compra.observacoes;
+                       
+                        if (isNaN(parseInt(this.nova_compra.indice))) {
+                            var proximo_id;
+                            if (this.compras.length == 0) {
+                                proximo_id = 1;
+                            } else {
+
+
+                                console.log(this.compras.length);
+
+                                proximo_id = (parseInt(this.compras[this.compras.length - 1].id) + 1)
+                            }
+                            this.compras.push({
+                                id: proximo_id,
+                                data: inputData,
+                                total: inputTotal,
+                                jogador: selectJogador,
+                                observacoes: inputObservacoes
+                            });
+                            alert('Nova Compra cadastrada!');
+                        }
+                        else {
+                            this.compras[this.nova_compra.indice] = {
+                                id: inputCd,
+                                data: inputData,
+                                total: inputTotal,
+                                jogador: selectJogador,
+                                observacoes: inputObservacoes
+                            };
+                            alert('Compra alterada!');
+                        }
+                        localStorage.setItem("compras", JSON.stringify(this.compras));
+                        this.cleanFormularioCompra();
+
+                    }
+                    else {
+                        alert('Erro no cadastro da compra!')
+                    };
+
+                },
+
+                editCompra: function (param_index) {
+                    this.nova_compra.indice = param_index;
+                    this.nova_compra.id = this.compras[param_index].id;
+                    this.nova_compra.data = this.compras[param_index].data;
+                    this.nova_compra.total = this.compras[param_index].total;
+                    this.nova_compra.jogador = this.compras[param_index].jogador;
+                    this.nova_compra.observacoes = this.compras[param_index].observacoes;
+                },
+
+                remCompra: function (param_index) {
+                    var r = confirm("Deseja realmente remover a compra " + this.compras[param_index].id);
+                    if (r == true) {
+                        this.compras.splice(param_index, 1);
+
+                        localStorage.setItem("compras", JSON.stringify(this.compras));
+
+                        alert('Removeu a Compra: ' + param_index);
+                    }
+                },
+
+                cleanFormularioCompra: function () {
+                    this.nova_compra.id = '';
+                    this.nova_compra.indice = '';
+                    this.nova_compra.data = '';
+                    this.nova_compra.total = 0;
+                    this.nova_compra.jogador = '';
+                    this.nova_compra.observacoes = '';
+                }
+
+
+            },
+            created: function () {
+                this.cleanFormularioCompra();
+                this.cleanFormularioEndereco();
+                this.cleanFormularioJogador();
+            }
+        });
+
+    });
+
+</script>
+
+</html>

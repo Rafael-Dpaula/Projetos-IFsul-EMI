@@ -1,0 +1,152 @@
+-- Inserção na tabela tb_modo
+INSERT INTO tb_modo(nome, datacriacao, quantboots, quantrounds)
+VALUES
+('mata-mata', '2024-07-02', 1, 3),
+('competitivo', '2024-07-02', 2, 13);
+
+-- Inserção na tabela tb_mapa
+INSERT INTO tb_mapa(nome, codmodo, datacadastromapa, status)
+VALUES
+('mirage', 1, '2024-07-02', 'A'),
+('dust 2', 2, '2024-05-02', 'I');
+
+-- Inserção na tabela tb_local
+INSERT INTO tb_local(nome, statuslocal)
+VALUES
+('L', FALSE),
+('caixa de fogo', TRUE);
+
+-- Inserção na tabela tb_mapa_locais
+INSERT INTO tb_mapa_locais(codmapa, codlocal)
+VALUES
+(1, 2),
+(2, 1);
+
+-- Inserção na tabela tb_patente
+INSERT INTO tb_patente(nome, quant_min_pontos, datacriacao, cor)
+VALUES
+('prata 2', 1300, '2012-01-01', 'prata'),
+('global elite', 22000, '2012-01-01', 'dourado e azul');
+
+-- Inserção na tabela tb_jogador
+INSERT INTO tb_jogador(nickname, senha, quantpontos, quantdinheiro, datacadastro, situacao)
+VALUES
+('rdp', '222333', 4000, 2000, DEFAULT, 'A'),
+('jdt', '222333', 16000, 6000, DEFAULT, 'I');
+
+-- Inserção na tabela tb_endereco
+INSERT INTO tb_endereco(nicknamejogador)
+VALUES
+('rdp'),
+('jdt');
+
+-- Inserção na tabela tb_tipomunicao
+INSERT INTO tb_tipomunicao(nome, datacriacao)
+VALUES
+('pistola', '2012-01-01'),
+('sniper', '2012-01-01');
+
+-- Inserção na tabela tb_artefato
+INSERT INTO tb_artefato(tipo, nome, valor, datacriacao)
+VALUES
+('A', 'AWP', 4750, DEFAULT),
+('M', 'traçante', 350, DEFAULT);
+
+-- Inserção na tabela tb_arma
+INSERT INTO tb_arma(codartefato, nivel_dano, velocidade_recarga, quant_max_compra)
+VALUES
+(1, 495, 2.5, 1),
+(2, 26, 1, 1);
+
+-- Inserção na tabela tb_municao
+INSERT INTO tb_municao(codartefato, cod_tipomunicao, quant_max_compra, calibre)
+VALUES
+(1, 2, 20, 7.62),
+(2, 1, 50, 9);
+
+-- Inserção na tabela tb_compra
+INSERT INTO tb_compra(nickname, data)
+VALUES
+('rdp', '2024-07-02'),
+('jdt', '2024-07-01');
+
+-- Inserção na tabela tb_compra_arma
+INSERT INTO tb_compra_arma(codartefato, codcompra, quantidade)
+VALUES
+(1, 1, 1),
+(2, 2, 30);
+
+-- Inserção na tabela tb_compra_municao
+INSERT INTO tb_compra_municao(codartefato, codcompra, quantidade)
+VALUES
+(1, 1, 1),
+(2, 2, 30);
+
+-- Inserção na tabela tb_jogador_artefato
+INSERT INTO tb_jogador_artefato(codartefato, nicknamejogador, quantidade)
+VALUES
+(1, 'rdp', 1),
+(2, 'jdt', 30);
+
+-- Inserção na tabela tb_timedisputa
+INSERT INTO tb_timedisputa(nometime, nicknamejogador, situacao)
+VALUES
+('contraterrorista', 'rdp', FALSE),
+('terrorista', 'jdt', TRUE);
+
+-- Inserção na tabela tb_partida
+INSERT INTO tb_partida(codmapa, codtimedisputa, datainicio, resultado)
+VALUES
+(1, 2, '2024-07-02', TRUE),
+(2, 1, '2024-07-01', FALSE);
+
+-- Inserção na tabela tb_round
+INSERT INTO tb_round(numero, codpartida, datainicio, resultado, quantresgates, quantmortes)
+VALUES
+(16, 1, '2024-07-02', TRUE, 16, 14),
+(25, 2, '2024-07-01', FALSE, 25, 20);
+
+-- Inserção na tabela tb_jogador_conquista_patente
+INSERT INTO tb_jogador_conquista_patente(codpatente, nickname)
+VALUES
+(1, 'rdp'),
+(2, 'jdt');
+
+-- Inserção na tabela tb_jogador (nova entrada)
+INSERT INTO tb_jogador(nickname, senha, quantpontos, quantdinheiro, datacadastro, data_ultimo_login, situacao)
+VALUES
+('Rafael', '2602', 5500, 2300, '2022-03-15', '2023-06-10', 'I');
+
+-- Inserção na tabela tb_endereco (nova entrada)
+INSERT INTO tb_endereco(complemento, cep, nicknamejogador)
+VALUES
+('aaa', '99060330', 'Rafael');
+
+-- Inserção na tabela tb_patente (novas entradas)
+INSERT INTO tb_patente(nome, quant_min_pontos, datacriacao, cor)
+VALUES
+('Ouro 3', 7000, '2012-01-01', 'Dourado'),
+('Prata Elite', 3200, '2012-01-01', 'Prata');
+
+-- Inserção na tabela tb_artefato (novas entradas)
+INSERT INTO tb_artefato(tipo, nome, valor, datacriacao)
+VALUES
+('A', 'Revolver R8', 800, '2012-01-01'),
+('A', 'Glock', 200, '2012-01-01');
+
+-- Inserção na tabela tb_arma (nova entrada)
+INSERT INTO tb_arma(codartefato, nivel_dano, velocidade_recarga, quant_max_compra)
+VALUES
+(3, 22, 2.1, 1);
+
+-- Inserção na tabela tb_jogador_artefato (novas entradas)
+INSERT INTO tb_jogador_artefato(codartefato, nicknamejogador, quantidade)
+VALUES
+(3, 'rdp', 1),
+(4, 'Rafael', 3);
+
+-- Inserção na tabela tb_jogador_conquista_patente (novas entradas)
+INSERT INTO tb_jogador_conquista_patente(nickname, codpatente)
+VALUES
+('Rafael', 3),
+('rdp', 4);
